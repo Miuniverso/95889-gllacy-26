@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Яна Минаева](https://up.htmlacademy.ru/htmlcss/26/user/95889).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Уразаев](https://htmlacademy.ru/profile/urazaev).
 
 ---
 
