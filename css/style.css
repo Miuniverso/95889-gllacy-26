@@ -36,7 +36,7 @@ a {
   border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
-.navigation-links a :hover,
+.navigation-links a:hover,
 .navigation-links a:focus {
   color: #323232;
   background-color: #f7f6f3;
@@ -45,6 +45,7 @@ a {
 }
 
 .hidden-navigation {
+  padding: 0;
   width: 143px;
 
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -59,9 +60,23 @@ a {
   line-height: 16px;
 }
 
+.hidden-navigation .link-news {
+  font-weight: 700;
+}
+
+/*
+    ерунда какая-то с обнулением стилей
+    пока не решила момент, как добавить стили на наведении выпадающему меню, чтобы при этом они не пересекались
+    со стилями основной навигации
+ */
+
 .hidden-navigation a:hover,
 .hidden-navigation a:focus {
   background-color: #fbded7;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  display: block;
 }
 
 .navigation-btn-search {
@@ -70,6 +85,20 @@ a {
 
   border-radius: 50%;
   background-color: rgba(255,255,255, 0.2);
+}
+
+/* форма поиска  */
+
+.search-form {
+  width: 341px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.search-form input {
+  width: 311px;
+  border: 1px solid #d3d3d2;
+  background-color: #ffffff;
 }
 
 .navigation-btn-login,
@@ -84,6 +113,36 @@ a {
 
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.2);
+}
+
+/* форма входа */
+
+.login-form {
+  width: 277px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.login-form input {
+  width: 241px;
+  border: 1px solid #d3d3d2;
+  background-color: #ffffff;
+}
+
+.login-btn {
+  color: #fefefe;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.login-help-links a {
+  color: #323232;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .navigation-btn-basket {
@@ -122,7 +181,6 @@ a {
 }
 
 .btn-buy {
-  font-family: 'Roboto', sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 44px;
@@ -171,7 +229,7 @@ a {
   list-style: none;
 }
 
-.hits-list h3 {
+.hits-list-title {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
@@ -297,6 +355,32 @@ color: #ffffff;
   padding: 13px 30px;
 }
 
+.feedback-form {
+  width: 478px;
+  background-color: #f8f7f4;
+}
+
+.feedback-title {
+  color: #323232;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.feedback-name input,
+.feedback-email input {
+  width: 267px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  background-color: #ffffff;
+}
+
+.feedback-btn {
+  color: #fefefe;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
 .social-links {
   list-style: none;
 }
@@ -327,4 +411,87 @@ color: #ffffff;
 
 .link-underline {
   border-bottom: 1px solid rgba(255,255,255, 0.2);
+}
+
+/* *** CATALOG ***  */
+
+.on-page-link {
+  padding: 6px 14px;
+
+  border-radius: 16px;
+  background-color: #d07058;
+}
+
+.basket-list {
+  width: 540px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.close-btn {
+  border: none;
+  background: none;
+}
+
+.item-title,
+.item-price,
+.total-price {
+  color: #323232;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.small-price {
+  color: #999999;
+}
+
+.total {
+  color: #323232;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.basket-buy-btn {
+  color: #fefefe;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+  padding: 10px 15px;
+}
+
+.breadcrumb {
+  list-style: none;
+}
+
+.breadcrumb a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #ffffff;
+
+  list-style: none;
+}
+
+.breadcrumb a:not(.active-link) {
+  border-bottom: 1px solid rgba(255,255,255, 0.2);
+}
+
+/* не знаю, как убрать псевдоэлемент у первого пункта  */
+.breadcrumb a::before {
+  content: '»';
+}
+
+.main-title {
+  color: #ffffff;
+
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+.catalog-list {
+  list-style: none;
 }
