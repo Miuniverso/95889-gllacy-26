@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #ffffff;
@@ -36,13 +36,25 @@ a {
   border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
-.navigation-links a:hover,
-.navigation-links a:focus {
+.navigation-links .navigation-link:hover,
+.navigation-links .navigation-link:focus {
   color: #323232;
   background-color: #f7f6f3;
   border-radius: 16px;
   padding: 7px 14px;
 }
+
+.navigation-links .navigation-link:active,
+.navigation-links .navigation-link:active {
+  color: #323232;
+  border-radius: 16px;
+  padding: 7px 14px;
+
+  box-shadow: inset 0 2px 1px #696969;
+  background-color: #ededed;
+  background-color: #f8f7f4;
+}
+
 
 .hidden-navigation {
   padding: 0;
@@ -64,18 +76,22 @@ a {
   font-weight: 700;
 }
 
-/*
-    ерунда какая-то с обнулением стилей
-    пока не решила момент, как добавить стили на наведении выпадающему меню, чтобы при этом они не пересекались
-    со стилями основной навигации
- */
-
 .hidden-navigation a:hover,
 .hidden-navigation a:focus {
   background-color: #fbded7;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
+  display: block;
+}
+
+.hidden-navigation a:active,
+.hidden-navigation a:active {
+  background-color: #f6b5a5;
+  display: block;
+}
+
+.hidden-navigation .hidden-active {
+  color: #323232;
+  background-color: #d07058;
+
   display: block;
 }
 
@@ -111,6 +127,7 @@ a {
 .navigation-btn-login {
   padding: 6px 16px;
 
+  color: #ffffff;
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.2);
 }
@@ -145,9 +162,17 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+.login-link-underline:focus,
+.login-link-underline:hover,
+.login-link-underline:active {
+  color: #e84d37;
+  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+}
+
 .navigation-btn-basket {
   padding: 6px 16px;
 
+  color: #ffffff;
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.2);
 }
@@ -178,6 +203,20 @@ a {
   border-radius: 35px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+}
+
+.orange-btn:focus,
+.orange-btn:hover {
+  box-shadow: 0 2px 2px #ac1000;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: #ffffff; */
+}
+
+.orange-btn:active {
+  box-shadow: inset 0 2px 2px #942718;
+  background-color: rgba(0, 0, 0, 0.07);
+  /* background-color: #ffffff; */
+  background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
 }
 
 .btn-buy {
@@ -233,8 +272,6 @@ a {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
-
-  border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
 .price-big {
@@ -355,6 +392,8 @@ color: #ffffff;
   padding: 13px 30px;
 }
 
+/* Форма обратной связи  */
+
 .feedback-form {
   width: 478px;
   background-color: #f8f7f4;
@@ -373,6 +412,21 @@ color: #ffffff;
   border: 1px solid rgba(178, 178, 178, 0.52);
   background-color: #ffffff;
 }
+
+.feedback-name input:hover,
+.feedback-email input:hover,
+.feedback-name input:focus,
+.feedback-email input:focus {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+  outline: none;
+}
+
+.feedback-name input:active,
+.feedback-email input:active {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  outline: none;
+}
+
 
 .feedback-btn {
   color: #fefefe;
@@ -394,8 +448,6 @@ color: #ffffff;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
-
-  border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
 .important-links .link-bold {
@@ -403,14 +455,21 @@ color: #ffffff;
 }
 
 .copiright-text {
-  color: #fefefe;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
 }
 
 .link-underline {
+  color: #fefefe;
   border-bottom: 1px solid rgba(255,255,255, 0.2);
+}
+
+.link-underline:hover,
+.link-underline:focus,
+.link-underline:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
 
 /* *** CATALOG ***  */
@@ -479,9 +538,9 @@ color: #ffffff;
   border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
-/* не знаю, как убрать псевдоэлемент у первого пункта  */
-.breadcrumb a::before {
-  content: '»';
+
+.breadcrumb a:not(.first-link)::before {
+  content: "»";
 }
 
 .main-title {
