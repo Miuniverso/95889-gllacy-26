@@ -6,8 +6,10 @@ body {
   font-size: 24px;
   font-weight: 400;
   color: #ffffff;
-  background-color: #849d8f;
+
+  margin: 0 auto;
 }
+
 
 a {
   text-decoration: none;
@@ -21,14 +23,52 @@ a {
   margin: -1px;
 }
 
+.content-center {
+  max-width: 1146px;
+  margin: 0 auto;
+}
+
+/* Навигация */
+
+.main-header {
+  position: relative;
+}
+
 .navigation {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation-links-left {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
 }
 
 .navigation-links, .hidden-navigation {
   list-style: none;
+  box-sizing: border-box;
+}
+
+.navigation-links {
+  display: flex;
+  justify-content: space-between;
+  width: 372px;
+  padding-left: 24px;
+
+}
+
+.navigation-btns-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 245px;
 }
 
 .navigation-links a {
@@ -101,6 +141,10 @@ a {
 
   border-radius: 50%;
   background-color: rgba(255,255,255, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* форма поиска  */
@@ -122,14 +166,49 @@ a {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  padding: 9px 17px 9px 43px;
+}
+
+.navigation-btn-search:hover,
+.navigation-btn-search:focus,
+.navigation-btn-login:hover,
+.navigation-btn-basket:hover,
+.navigation-btn-login:focus,
+.navigation-btn-basket:focus {
+  background-color: #f8f7f4;
+  color: #323232;
+  fill: #000000;
+}
+
+.navigation-btn-search:hover svg path,
+.navigation-btn-login:hover svg path,
+.navigation-btn-basket:hover svg path,
+.navigation-btn-search:focus svg path,
+.navigation-btn-login:focus svg path,
+.navigation-btn-basket:focus svg path {
+  fill: #000000;
 }
 
 .navigation-btn-login {
-  padding: 6px 16px;
-
   color: #ffffff;
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.2);
+}
+
+.navigation-btn-login svg path {
+  fill: #ffffff;
+}
+
+.navigation-btn-login svg,
+.navigation-btn-basket svg {
+  position: absolute;
+  left: 15px;
 }
 
 /* форма входа */
@@ -170,12 +249,13 @@ a {
 }
 
 .navigation-btn-basket {
-  padding: 6px 16px;
-
   color: #ffffff;
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.2);
 }
+
+
+/* конец навигации */
 
 .contact-information {
   font-size: 22px;
@@ -183,6 +263,14 @@ a {
   line-height: 24px;
 
   font-style: normal;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  position: absolute;
+  right: 0;
+  top: 77px;
 }
 
 .work-time {
@@ -191,10 +279,124 @@ a {
   line-height: 16px;
 }
 
-.icecream-title {
+
+/* слайдер */
+
+.slider-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/icecream/big_icecream_first.png");
+  background-repeat: no-repeat;
+  background-position: center -74px;
+
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.slider-wrapper::before,
+.slider-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.slider-wrapper::before {
+  background-image: url("../img/icecream/big_icecream_second.png");
+}
+
+.slider-wrapper::after {
+  background-image: url("../img/icecream/big_icecream_third.png");
+}
+
+.slider {
+  position: relative;
+
+  padding-top: 321px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slide {
+  display: none;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 63px;
+  left: 0;
+  z-index: 20;
+
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#product-1:checked ~ .background-color-wrapper label[for="product-1"],
+#product-2:checked ~ .background-color-wrapper label[for="product-2"],
+#product-3:checked ~ .background-color-wrapper label[for="product-3"] {
+  background-color: #ffffff;
+}
+
+#product-1:checked ~ .background-color-wrapper #slide1,
+#product-2:checked ~ .background-color-wrapper #slide2,
+#product-3:checked ~ .background-color-wrapper #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .background-color-wrapper .slider-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/icecream/big_icecream_first.png");
+}
+
+#product-2:checked ~ .background-color-wrapper .slider-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/icecream/big_icecream_second.png");
+}
+
+#product-3:checked ~  .background-color-wrapper .slider-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/icecream/big_icecream_third.png");
+}
+
+#product-1:checked ~ .background-color-wrapper {
+  background-color: #849d8f;
+}
+
+#product-2:checked ~ .background-color-wrapper {
+  background-color: #8996a6;
+}
+
+#product-3:checked ~ .background-color-wrapper {
+  background-color: #9d8b84;
+}
+
+.icecream-slide-title {
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 60px;
+
+  margin: 0 auto;
+  margin-bottom: 27px;
+
+  width: 670px;
 }
 
 .orange-btn {
@@ -202,58 +404,82 @@ a {
 
   border-radius: 35px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
 }
 
 .orange-btn:focus,
 .orange-btn:hover {
-  box-shadow: 0 2px 2px #ac1000;
-  background-color: rgba(255, 255, 255, 0.2);
-  /* background-color: #ffffff; */
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .orange-btn:active {
-  box-shadow: inset 0 2px 2px #942718;
-  background-color: rgba(0, 0, 0, 0.07);
-  /* background-color: #ffffff; */
-  background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .btn-buy {
+  display: inline-block;
+
   font-size: 32px;
   font-weight: 700;
   line-height: 44px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
-  padding: 15px 43px;
+  padding: 12px 44px;
+  margin-bottom: 37px;
+}
+
+
+/* акции */
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
 }
 
 .actions h2 {
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
+
+  margin: 0;
 }
 
 .actions p {
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
+
+  margin: 0;
+  padding-top: 15px;
 }
 
-.left-action {
+.action {
   width: 560px;
-  background-image: url(../img/raspberry_bg.jpg);
+  padding: 16px 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 15px;
+}
+
+
+.left-action {
+  background-image: url(../img/raspberry_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 15px;
 }
 
 .right-action {
-  width: 560px;
-  background-image: url(../img/chocolate_bg.jpg);
+  background-image: url(../img/chocolate_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 15px;
 }
 
 .action-btn {
@@ -261,37 +487,84 @@ a {
   font-weight: 700;
   line-height: 24px;
 
-  padding: 14px 25px;
+  align-self: flex-end;
+
+  padding: 11px 23px;
+  margin-top: 44px;
+  margin-bottom: 8px;
+}
+
+/* хиты */
+
+.hits {
+  margin-top: 42px;
 }
 
 .hits-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.hit-item {
+  width: 267px;
+}
+
+.hit-item::before {
+  position: absolute;
+  content:"";
+  width: 62px;
+  height:62px;
+
+  background-image: url("../img/svg/hit.svg");
+  background-repeat: no-repeat;
 }
 
 .hits-list-title {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
+
+  margin: 0;
+  padding-top: 7px;
 }
 
 .price-big {
-font-size: 45px;
-font-weight: 700;
-line-height: 45px;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
 
-text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
-color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+  color: #ffffff;
+
+  position: absolute;
+  bottom: 63px;
+  margin: 0;
 }
 
 .weight-small {
   font-size: 30px;
 }
 
+/* Преимущества */
+
 .advantages {
-  background-image: url(../img/waffle_bg.jpg);
+  max-width: 1107px;
+
+  background-image: url("../img/waffle_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
+
+  padding-top: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 40px;
 }
 
 .advantages h2 {
@@ -299,6 +572,9 @@ color: #ffffff;
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
+
+  margin: 0;
+  letter-spacing: 0.2px;
 }
 
 .advantages-list {
@@ -308,14 +584,112 @@ color: #ffffff;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding-top: 23px;
+}
+
+.advantages-list li {
+  width: 485px;
+  position: relative;
+
+  padding-left: 56px;
+  padding-bottom: 26px;
+  letter-spacing: 0.1px;
+}
+
+.advantage-icecream {
+  order: 1;
+}
+
+.advantage-icecream::before {
+  position: absolute;
+  content:"";
+  width: 49px;
+  height: 49px;
+  background-image: url(../img/svg/ice-cream.svg);
+  background-repeat: no-repeat;
+  top: -13px;
+  left: 0px;
+  background-repeat: no-repeat;
+}
+
+.advantage-farm {
+  order: 2;
+}
+
+.advantage-farm::before {
+  position: absolute;
+  content:"";
+  width: 49px;
+  height: 49px;
+  background-image: url(../img/svg/cow.svg);
+  background-repeat: no-repeat;
+  top: -13px;
+  left: 0px;
+  background-repeat: no-repeat;
+}
+
+
+.advantage-nature {
+  order: 3;
+}
+
+.advantage-nature::before {
+  position: absolute;
+  content:"";
+  width: 49px;
+  height: 49px;
+  background-image: url(../img/svg/eco.svg);
+  background-repeat: no-repeat;
+  top: -13px;
+  left: 0px;
+  background-repeat: no-repeat;
+}
+
+
+.advantage-temperature {
+  order: 4;
+}
+
+.advantage-temperature::before {
+  position: absolute;
+  content:"";
+  width: 49px;
+  height: 49px;
+  background-image: url(../img/svg/thermometer.svg);
+  background-repeat: no-repeat;
+  top: -13px;
+  left: 0px;
+  background-repeat: no-repeat;
+}
+
+
+/* Статья */
+
+.article-and-subscription {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 40px;
 }
 
 .article-new {
-  width: 560px;
+  width: 540px;
   background-image: url(../img/strawberry_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
+  padding-top: 11px;
+  padding-left: 20px;
+  /* padding-bottom: 81px; */
 }
 
 .article-new h2 {
@@ -324,6 +698,9 @@ color: #ffffff;
   line-height: 22px;
 
   color: #323232;
+
+  padding-top: 13px;
+  margin: 0;
 }
 
 .article-new a {
@@ -333,7 +710,15 @@ color: #ffffff;
   text-decoration: underline;
 
   color: #323232;
+
+  width: 300px;
+  display: inline-block;
+  padding-top: 5px;
+
 }
+
+
+/* Форма для подписки */
 
 .subscription {
   width: 560px;
@@ -343,27 +728,96 @@ color: #ffffff;
 
 .subscription-wrapper {
   background-color: #f8f7f4;
+  margin: 5px;
+  border-radius: 15px;
+
+  padding-bottom: 9px;
 }
 
-.subscription-wrapper p {
+.subscription-title {
   color: #5a5a5a;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+
+  margin: 0;
+  padding-top: 31px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+
+}
+
+.subscription-input-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-left: 21px;
+  margin-right: 21px;
 }
 
 .subscription-form input {
-  width: 368px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  width: 369px;
+  padding-left: 14px;
+
   border: 1px solid rgba(178, 178, 178, 0.52);
   background-color: #ffffff;
+
+  border-radius: 5px;
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+.subscription-form input:focus,
+.subscription-form input:focus {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+  outline: none;
+}
+
+.subscription-form input:active {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  background-color: #ffffff;
+  font-weight: 700;
+}
+
+.subscription-form input::placeholder {
+  color: #999999;
 }
 
 .subscription-btn {
-  padding: 14px 25px;
+  padding: 9px 19px;
   color: #fefefe;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+}
+
+/* карта */
+
+.map {
+  position: relative;
+  margin-top: 40px;
+}
+
+/* блок с контактной информацией */
+
+.map-information-wrapper {
+  position: absolute;
+
+  right: 867px;
+  bottom: 71px;
+  background-color: #ffffff;
+
+  max-width: 302px;
+
+  border-radius: 15px;
+
+  text-align: center;
 }
 
 .map-information {
@@ -373,8 +827,15 @@ color: #ffffff;
   font-weight: 400;
   line-height: 20px;
 
-  width: 302px;
-  background-color: #ffffff;
+  padding-right: 10px;
+  padding-left: 26px;
+  padding-top: 27px;
+
+  text-align: left;
+}
+
+.information {
+  display: block;
 }
 
 .information-bold {
@@ -383,13 +844,36 @@ color: #ffffff;
   line-height: 24px;
 }
 
+.information-adress-title {
+  padding-right: 115px;
+}
+
+.information-time {
+  padding-bottom: 26px;
+}
+
+.information-tel {
+  padding-top: 6px;
+}
+
+.information-tel-title {
+  padding-top: 17px;
+}
+
+.information-adress {
+  padding-top: 3px;
+}
+
 .information-btn {
+  display: inline-block;
+
   color: #fefefe;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
 
-  padding: 13px 30px;
+  padding: 10px 27px;
+  margin-bottom: 29px;
 }
 
 /* Форма обратной связи  */
@@ -435,12 +919,78 @@ color: #ffffff;
   line-height: 24px;
 }
 
+/* футер */
+
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .social-links {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: 2px;
+  margin-top: 28px;
+}
+
+.social-link-item {
+  margin-right: 10px;
+}
+
+.social-link-item svg path {
+  fill: rgba(255, 255, 255, 0.8)
+}
+
+.social-link-item svg {
+  border: 3px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+}
+
+.social-link-item svg:hover,
+.social-link-item svg:focus {
+  border: 3px solid rgba(255,255,255,0.7);
+  fill: rgba(255, 255, 255);
+}
+
+/*
+Не понимаю разницу состояний при наведении и нажатии социальных кнопок
+что должно поменяться?
+*/
+
+.social-link-item svg:active {
+  border: 3px solid rgba(255,255,255,0.7);
 }
 
 .important-links {
+  display: flex;
+  flex-direction: row;
+  padding-top: 16px;
+}
+
+.important-links-left,
+.important-links-right {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.heart-wrapper {
+  position: relative;
+}
+
+.heart {
+  position: absolute;
+  top: 10px;
+  left: -23px;
+}
+
+
+.important-links-left {
+  padding-right: 31px;
 }
 
 .important-links a {
@@ -452,6 +1002,17 @@ color: #ffffff;
 
 .important-links .link-bold {
   font-weight: 700;
+}
+
+.copiright {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.htmlacademy-logo {
+  padding-top: 10px;
 }
 
 .copiright-text {
