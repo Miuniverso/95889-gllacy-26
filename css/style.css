@@ -23,6 +23,10 @@ a {
   margin: -1px;
 }
 
+.show {
+  display: block;
+}
+
 .content-center {
   max-width: 1146px;
   margin: 0 auto;
@@ -30,7 +34,7 @@ a {
 
 /* Навигация */
 
-.main-header {
+.header {
   position: relative;
 }
 
@@ -51,7 +55,8 @@ a {
   margin-top: 7px;
 }
 
-.navigation-links, .hidden-navigation {
+.navigation-links,
+.dropdown-navigation {
   list-style: none;
   box-sizing: border-box;
 }
@@ -95,40 +100,88 @@ a {
   background-color: #f8f7f4;
 }
 
+/* Выпадающее меню */
 
-.hidden-navigation {
+.catalog-link:hover .dropdown-navigation {
+    display: block;
+}
+
+.dropdown-navigation {
+  position: absolute;
+
   padding: 0;
   width: 143px;
-
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
   border-radius: 5px;
+
+  left: 157px;
+  top: 60px;
+  padding-top: 6px;
+  padding-bottom: 7px;
+
+  z-index: 1;
 }
 
-.hidden-navigation a {
+.dropdown-navigation a {
   color: #323232;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
+
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  display: block;
 }
 
-.hidden-navigation .link-news {
+.link-news a {
   font-weight: 700;
+  position: relative;
 }
 
-.hidden-navigation a:hover,
-.hidden-navigation a:focus {
+.link-news::after {
+  position: absolute;
+
+  content: "";
+  background-image: url("../img/dropdown-line.png");
+  background-repeat: no-repeat;
+  height: 2px;
+  width: 128px;
+  top: 37px;
+  left: 6px;
+}
+
+.dropdown-navigation li:nth-child(2) {
+  margin-top: 11px;
+}
+
+.dropdown-navigation li:nth-child(3) {
+  margin-top: 4px;
+}
+
+.dropdown-navigation li:nth-child(4) {
+  margin-top: 5px;
+}
+
+.dropdown-navigation li:last-child {
+  margin-top: 3px;
+}
+
+.dropdown-navigation-link:hover,
+.dropdown-navigation-link:focus {
   background-color: #fbded7;
   display: block;
 }
 
-.hidden-navigation a:active,
-.hidden-navigation a:active {
+.dropdown-navigation a:active,
+.dropdown-navigation a:active {
   background-color: #f6b5a5;
   display: block;
 }
 
-.hidden-navigation .hidden-active {
+.dropdown-active {
   color: #323232;
   background-color: #d07058;
 
@@ -497,10 +550,10 @@ a {
 /* хиты */
 
 .hits {
-  margin-top: 42px;
+  margin-top: 3px;
 }
 
-.hits-list {
+.icecream-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -511,8 +564,11 @@ a {
   justify-content: space-between;
 }
 
-.hit-item {
+.icecream-item {
   width: 267px;
+  position: relative;
+
+  margin-top: 38px;
 }
 
 .hit-item::before {
@@ -525,13 +581,17 @@ a {
   background-repeat: no-repeat;
 }
 
-.hits-list-title {
+.icecream-list-title {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
 
   margin: 0;
   padding-top: 7px;
+
+/*  */
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .price-big {
@@ -543,7 +603,7 @@ a {
   color: #ffffff;
 
   position: absolute;
-  bottom: 63px;
+  bottom: 68px;
   margin: 0;
 }
 
@@ -593,7 +653,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  padding-top: 23px;
+  padding-top: 24px;
 }
 
 .advantages-list li {
@@ -601,7 +661,7 @@ a {
   position: relative;
 
   padding-left: 56px;
-  padding-bottom: 26px;
+  padding-bottom: 23px;
   letter-spacing: 0.1px;
 }
 
@@ -731,7 +791,7 @@ a {
   margin: 5px;
   border-radius: 15px;
 
-  padding-bottom: 9px;
+  padding-bottom: 10px;
 }
 
 .subscription-title {
@@ -800,17 +860,19 @@ a {
 /* карта */
 
 .map {
-  position: relative;
   margin-top: 40px;
 }
 
 /* блок с контактной информацией */
 
+.map-information-container {
+  position: relative;
+}
+
 .map-information-wrapper {
   position: absolute;
-
-  right: 867px;
-  bottom: 71px;
+  top: 61px;
+  right: 0;
   background-color: #ffffff;
 
   max-width: 302px;
@@ -921,11 +983,12 @@ a {
 
 /* футер */
 
-.main-footer {
+.footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 22px;
 }
 
 .social-links {
@@ -1035,6 +1098,23 @@ a {
 
 /* *** CATALOG ***  */
 
+.inner-body {
+  background-color: #849d8f;
+  width: 1146px;
+}
+
+
+.navigation-links-inner {
+  padding-left: 9px;
+}
+
+.navigation-btns-right-inner {
+  position: relative;
+
+  width: 261px;
+}
+
+
 .on-page-link {
   padding: 6px 14px;
 
@@ -1046,11 +1126,37 @@ a {
   width: 540px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
+  position: absolute;
+
+  top: 59px;
+  right: 0;
+
+  border-radius: 5px;
+
+  z-index: 1;
+}
+
+.basket-list-table {
+  padding-top: 2px;
+}
+
+.table-string {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding-top: 14px;
 }
 
 .close-btn {
   border: none;
   background: none;
+  padding: 0;
+  margin-left: 13px;
+}
+
+.icecream-mini {
+  padding-left: 10px;
 }
 
 .item-title,
@@ -1062,8 +1168,30 @@ a {
   line-height: 16px;
 }
 
+.item-title {
+  width: 220px;
+  padding-left: 15px;
+}
+
+.item-price {
+  padding-left: 25px;
+}
+
+.total-price {
+  padding-left: 28px;
+}
+
 .small-price {
   color: #999999;
+}
+
+.total-sum {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 15px;
+  padding-top: 18px;
+
 }
 
 .total {
@@ -1080,10 +1208,19 @@ a {
   line-height: 24px;
 
   padding: 10px 15px;
+  margin-top: 13px;
 }
 
 .breadcrumb {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 14px;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 210px;
 }
 
 .breadcrumb a {
@@ -1095,13 +1232,17 @@ a {
   list-style: none;
 }
 
+/* Подчеркивание теперь и у псевдоэлемента */
+
 .breadcrumb a:not(.active-link) {
   border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
-
 .breadcrumb a:not(.first-link)::before {
   content: "»";
+
+  margin-left: 7px;
+  margin-right: 7px;
 }
 
 .main-title {
@@ -1110,8 +1251,97 @@ a {
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
+
+  margin: 0;
 }
 
 .catalog-list {
   list-style: none;
+}
+
+/* временно как заглушка под фильтр */
+
+.filter {
+  margin-top: 162px;
+}
+
+.paginator {
+  display: flex;
+  justify-content: flex-end;
+
+  padding-top: 88px;
+  padding-right: 5px;
+  padding-bottom: 31px;
+}
+
+.paginator-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-right: 16px;
+
+  display: flex;
+  width: 146px;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: relative;
+
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  /* Text style for "," */
+  /* color: #353535; */
+  /* Text style for "1" */
+  color: #323232;
+}
+
+
+.paginator-item {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* padding-top: 2px; */
+}
+
+.paginator-item a {
+  color: #323232;
+}
+
+
+.paginator-item:hover,
+ .paginator-item:focus {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.paginator-list::before {
+  content:"";
+  position: absolute;
+  left: -29px;
+  top: -3px;
+  width: 15px;
+  height: 22px;
+
+  background-image: url("../img/svg/icon-right-small.svg");
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+}
+
+
+.paginator-list::after {
+  content:"";
+  position: absolute;
+  right: -27px;
+  top: 7px;
+  width: 15px;
+  height: 22px;
+
+  background-image: url("../img/svg/icon-right-small.svg");
+  background-repeat: no-repeat;
 }
