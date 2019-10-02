@@ -2,12 +2,14 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #ffffff;
 
   margin: 0 auto;
+
+   min-width: 1146px;
 }
 
 
@@ -76,9 +78,8 @@ a {
 .navigation-links {
   display: flex;
   justify-content: space-between;
-  width: 372px;
-  padding-left: 24px;
-
+  width: 387px;
+  padding-left: 9px;
 }
 
 .navigation-btns-right {
@@ -88,30 +89,26 @@ a {
   width: 245px;
 }
 
-
-/* Меня напрягают прыгающие влево/вправо ссылки при их наведении
-  и соответственно изменении стилизации
- */
-
-
-.navigation-links a {
+.outer-navigation-link {
   color: #ffffff;
   border-bottom: 1px solid rgba(255,255,255, 0.2);
+
+  margin: 0 14px;
 }
 
-.navigation-links .navigation-link:hover,
-.navigation-links .navigation-link:focus {
+.outer-navigation-link:hover,
+.outer-navigation-link:focus {
   color: #323232;
   background-color: #f7f6f3;
   border-radius: 16px;
   padding: 7px 14px;
+  margin: 0;
 }
 
-.navigation-links .navigation-link:active,
-.navigation-links .navigation-link:active {
+.outer-navigation-link:active,
+.outer-navigation-link:active {
   color: #323232;
   border-radius: 16px;
-  padding: 7px 14px;
 
   box-shadow: inset 0 2px 1px #696969;
   background-color: #ededed;
@@ -253,18 +250,10 @@ a {
   color: #323232;
 }
 
-/* .navigation-btn-basket:hover,
-.navigation-btn-basket:focus {
-  content: "2 товара";
-} */
-
-/* Почему-то больше не меняется цвет svg при наведении =( */
-
-.navigation-btn-search:hover svg path,
-.navigation-btn-login:hover svg path,
-.navigation-btn-search:focus svg path,
-.navigation-btn-login:focus svg path,
- {
+.navigation-btn-search:hover path,
+.navigation-btn-login:hover path,
+.navigation-btn-search:focus path,
+.navigation-btn-login:focus path {
   fill: #000000;
 }
 
@@ -1108,7 +1097,7 @@ margin-right: 20px;
   margin-right: 10px;
 }
 
-.social-link-item svg path {
+.social-link-item path {
   fill: rgba(255, 255, 255, 0.8)
 }
 
@@ -1123,13 +1112,9 @@ margin-right: 20px;
   fill: rgba(255, 255, 255);
 }
 
-/*
-Не понимаю разницу состояний при наведении и нажатии социальных кнопок
-что должно поменяться?
-*/
-
 .social-link-item svg:active {
   border: 3px solid rgba(255,255,255,0.7);
+  fill: #e9e9e9;
 }
 
 .important-links {
@@ -1336,17 +1321,17 @@ margin-right: 20px;
   list-style: none;
 }
 
-/* Подчеркивание теперь и у псевдоэлемента */
-
-.breadcrumb a:not(.active-link) {
+.breadcrumb a:not(:last-child) {
   border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
-.breadcrumb a:not(.first-link)::before {
+.breadcrumb li:not(:first-child)::before {
   content: "»";
 
   margin-left: 7px;
   margin-right: 7px;
+
+  font-size: 14px;
 }
 
 .main-title {
@@ -1395,9 +1380,6 @@ margin-right: 20px;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  /* Text style for "," */
-  /* color: #353535; */
-  /* Text style for "1" */
   color: #323232;
 }
 
@@ -1410,18 +1392,25 @@ margin-right: 20px;
   justify-content: center;
   align-items: center;
 
-  /* padding-top: 2px; */
+  border-radius: 50%;
 }
 
 .paginator-item a {
   color: #323232;
 }
 
+.paginator-item-current {
+  background-color: #ffffff;
+}
 
 .paginator-item:hover,
  .paginator-item:focus {
-  background-color: #ffffff;
-  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.paginator-item:hover a,
+.paginator-item:focus a {
+  color: #ffffff;
 }
 
 .paginator-list::before {
