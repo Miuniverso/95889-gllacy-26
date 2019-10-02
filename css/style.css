@@ -32,6 +32,18 @@ a {
   margin: 0 auto;
 }
 
+.input {
+  display: block;
+  margin: 0 auto;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  background-color: #ffffff;
+}
+
 /* Навигация */
 
 .header {
@@ -76,6 +88,12 @@ a {
   width: 245px;
 }
 
+
+/* Меня напрягают прыгающие влево/вправо ссылки при их наведении
+  и соответственно изменении стилизации
+ */
+
+
 .navigation-links a {
   color: #ffffff;
   border-bottom: 1px solid rgba(255,255,255, 0.2);
@@ -102,9 +120,9 @@ a {
 
 /* Выпадающее меню */
 
-.catalog-link:hover .dropdown-navigation {
+/* .catalog-link:hover .dropdown-navigation {
     display: block;
-}
+} */
 
 .dropdown-navigation {
   position: absolute;
@@ -139,6 +157,8 @@ a {
 .link-news a {
   font-weight: 700;
   position: relative;
+
+  margin-bottom: 11px;
 }
 
 .link-news::after {
@@ -153,20 +173,8 @@ a {
   left: 6px;
 }
 
-.dropdown-navigation li:nth-child(2) {
-  margin-top: 11px;
-}
-
-.dropdown-navigation li:nth-child(3) {
+.dropdown-navigation li:not(:first-child) {
   margin-top: 4px;
-}
-
-.dropdown-navigation li:nth-child(4) {
-  margin-top: 5px;
-}
-
-.dropdown-navigation li:last-child {
-  margin-top: 3px;
 }
 
 .dropdown-navigation-link:hover,
@@ -181,7 +189,7 @@ a {
   display: block;
 }
 
-.dropdown-active {
+.link-current {
   color: #323232;
   background-color: #d07058;
 
@@ -206,12 +214,21 @@ a {
   width: 341px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
+
+  position: absolute;
+  top: 59px;
+  right: 213px;
+
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 1;
 }
 
 .search-form input {
-  width: 311px;
-  border: 1px solid #d3d3d2;
-  background-color: #ffffff;
+  width: 287px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .navigation-btn-login,
@@ -231,20 +248,23 @@ a {
 .navigation-btn-search:hover,
 .navigation-btn-search:focus,
 .navigation-btn-login:hover,
-.navigation-btn-basket:hover,
-.navigation-btn-login:focus,
-.navigation-btn-basket:focus {
+.navigation-btn-login:focus {
   background-color: #f8f7f4;
   color: #323232;
-  fill: #000000;
 }
+
+/* .navigation-btn-basket:hover,
+.navigation-btn-basket:focus {
+  content: "2 товара";
+} */
+
+/* Почему-то больше не меняется цвет svg при наведении =( */
 
 .navigation-btn-search:hover svg path,
 .navigation-btn-login:hover svg path,
-.navigation-btn-basket:hover svg path,
 .navigation-btn-search:focus svg path,
 .navigation-btn-login:focus svg path,
-.navigation-btn-basket:focus svg path {
+ {
   fill: #000000;
 }
 
@@ -270,12 +290,24 @@ a {
   width: 277px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
+
+  position: absolute;
+  z-index: 1;
+  top: 59px;
+  right: 109px;
+  padding-bottom: 8px;
+
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .login-form input {
-  width: 241px;
-  border: 1px solid #d3d3d2;
-  background-color: #ffffff;
+  width: 209px;
+  margin-top: 21px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .login-btn {
@@ -283,13 +315,27 @@ a {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+
+  align-self: flex-start;
+  margin-left: 16px;
+  padding: 10px 26px;
+  margin-top: 18px;
+}
+
+.login-help-links {
+  align-self: flex-end;
+display: flex;
+flex-direction: column;
+margin-top: -45px;
+margin-right: 20px;
 }
 
 .login-help-links a {
   color: #323232;
   font-size: 13px;
   font-weight: 400;
-  line-height: 24px;
+  /* line-height: 24px; */
+  padding-top: 3px;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
@@ -306,7 +352,6 @@ a {
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.2);
 }
-
 
 /* конец навигации */
 
@@ -331,7 +376,6 @@ a {
   font-weight: 700;
   line-height: 16px;
 }
-
 
 /* слайдер */
 
@@ -480,8 +524,8 @@ a {
   line-height: 44px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
-  padding: 12px 44px;
-  margin-bottom: 37px;
+  padding: 10px 40px;
+  margin-bottom: 40px;
 }
 
 
@@ -557,6 +601,7 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -589,7 +634,6 @@ a {
   margin: 0;
   padding-top: 7px;
 
-/*  */
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -759,7 +803,7 @@ a {
 
   color: #323232;
 
-  padding-top: 13px;
+  padding-top: 15px;
   margin: 0;
 }
 
@@ -823,11 +867,11 @@ a {
 
   width: 369px;
   padding-left: 14px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 
   border: 1px solid rgba(178, 178, 178, 0.52);
-  background-color: #ffffff;
 
-  border-radius: 5px;
   outline: none;
 
   box-sizing: border-box;
@@ -891,7 +935,7 @@ a {
 
   padding-right: 10px;
   padding-left: 26px;
-  padding-top: 27px;
+  padding-top: 28px;
 
   text-align: left;
 }
@@ -941,8 +985,26 @@ a {
 /* Форма обратной связи  */
 
 .feedback-form {
-  width: 478px;
+  width: 427px;
   background-color: #f8f7f4;
+  position: fixed;
+  top: 339px;
+  left: 50%;
+  margin-left: -239px;
+  border-radius: 5px;
+  padding-top: 13px;
+  padding-left: 26px;
+  padding-right: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border: none;
+  background-color: transparent;
 }
 
 .feedback-title {
@@ -952,11 +1014,49 @@ a {
   line-height: 28px;
 }
 
+.feedback-name,
+.feedback-email,
+.feedback-comment {
+  margin: 0;
+}
+
 .feedback-name input,
 .feedback-email input {
-  width: 267px;
+  color: #999999;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 266px;
   border: 1px solid rgba(178, 178, 178, 0.52);
   background-color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 19px;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.feedback-comment textarea {
+  color: #999999;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 155px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 22px;
+
+  border-radius: 5px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
 }
 
 .feedback-name input:hover,
@@ -979,6 +1079,10 @@ a {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+  margin-top: 15px;
+  align-self: flex-end;
+  padding: 9px 22px;
+  margin-bottom: 28px;
 }
 
 /* футер */
@@ -1148,7 +1252,7 @@ a {
   padding-top: 14px;
 }
 
-.close-btn {
+.table-close-btn {
   border: none;
   background: none;
   padding: 0;
@@ -1271,7 +1375,7 @@ a {
 
   padding-top: 88px;
   padding-right: 5px;
-  padding-bottom: 31px;
+  padding-bottom: 39px;
 }
 
 .paginator-list {

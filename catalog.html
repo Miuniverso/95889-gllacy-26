@@ -21,7 +21,7 @@
               <a href="#" class="navigation-link on-page-link catalog-link">Каталог</a>
               <ul class="dropdown-navigation">
                 <li class="dropdown-navigation-link link-news"><a href="#">Новинки</a></li>
-                <li class="dropdown-navigation-link"><a href="catalog.html">Сливочное</a></li>
+                <li class="dropdown-navigation-link link-current"><a>Сливочное</a></li>
                 <li class="dropdown-navigation-link"><a href="#">Щербеты</a></li>
                 <li class="dropdown-navigation-link"><a href="#">Фруктовый лед</a></li>
                 <li class="dropdown-navigation-link"><a href="#">Мелорин</a></li>
@@ -42,7 +42,7 @@
           <!--  Форма поиска по сайту  -->
           <form action="#" method="get" class="search-form visually-hidden">
             <label class="visually-hidden" for="search">Форма поиска</label>
-            <input type="text" name="search-input" id="search" placeholder="Крем-брюле">
+            <input class="input" type="text" name="search-input" id="search" placeholder="Крем-брюле">
           </form>
           <a href="#" class="navigation-btn-login">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#000"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
@@ -51,9 +51,9 @@
           <!--  Форма входа на сайт  -->
           <form action="#" method="post" class="login-form visually-hidden">
             <label class="visually-hidden" for="login">Логин</label>
-            <input type="text" name="login-input" id="login" placeholder="email@example.com">
+            <input class="input" type="text" name="login-input" id="login" placeholder="email@example.com">
             <label class="visually-hidden" for="password">Пароль</label>
-            <input type="text" name="password-input" id="password" placeholder="••••••••">
+            <input class="input" type="text" name="password-input" id="password" placeholder="••••••••">
             <button type="submit" name="button" class="login-btn orange-btn">Войти</button>
             <p class="login-help-links">
               <a href="#" class="login-link-underline">Забыли пароль?</a>
@@ -69,7 +69,7 @@
           <table class="basket-list-table">
             <tr class="table-string">
               <td>
-                <button type="button" name="button" class="close-btn" aria-label="Удалить товар из корзины">
+                <button type="button" name="button" class="-table-close-btn" aria-label="Удалить товар из корзины">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
                 </button>
               </td>
@@ -88,7 +88,7 @@
             </tr>
             <tr class="table-string">
               <td>
-                <button type="button" name="button" class="close-btn" aria-label="Удалить товар из корзины">
+                <button type="button" name="button" class="table-close-btn" aria-label="Удалить товар из корзины">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
                 </button>
               </td>
@@ -110,9 +110,7 @@
             <b class="total">Итого: 750 руб.</b>
             <a href="#" class="basket-buy-btn orange-btn">Оформить заказ</a>
         </p>
-
         </div>
-
       </nav>
       <address class="contact-information">
         <span class="work-time">С 10 до 20, ежедневно</span>
