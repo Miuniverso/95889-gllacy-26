@@ -49,7 +49,12 @@ a {
 /* Навигация */
 
 .header {
-  position: relative;
+  /* position: relative; */
+  position: absolute;
+  left: 50%;
+  margin-left: -573px;
+  width: 1146px;
+  z-index: 2;
 }
 
 .navigation {
@@ -117,12 +122,14 @@ a {
 
 /* Выпадающее меню */
 
-/* .catalog-link:hover .dropdown-navigation {
+.catalog-link:hover ~ .dropdown-navigation {
     display: block;
-} */
+    z-index: 3;
+}
 
 .dropdown-navigation {
   position: absolute;
+  display: none;
 
   padding: 0;
   width: 143px;
@@ -137,6 +144,19 @@ a {
 
   z-index: 1;
 }
+
+/* для решения вопроса
+с переходом на выпадающее меню
+ */
+
+/* .dropdown-navigation::before {
+  position: absolute;
+  content: "";
+  width: 70%;
+  top: -10px;
+  display: block;
+  padding-bottom: 10px;
+} */
 
 .dropdown-navigation a {
   color: #323232;
@@ -171,7 +191,7 @@ a {
 }
 
 .dropdown-navigation li:not(:first-child) {
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .dropdown-navigation-link:hover,
@@ -205,6 +225,10 @@ a {
   align-items: center;
 }
 
+.catalog-link:hover .dropdown-navigation {
+  display: block;
+}
+
 /* форма поиска  */
 
 .search-form {
@@ -220,6 +244,12 @@ a {
   padding-top: 20px;
   padding-bottom: 20px;
   z-index: 1;
+
+  display: none;
+}
+
+.navigation-btn-search:hover ~ .search-form {
+  display: block;
 }
 
 .search-form input {
@@ -290,6 +320,12 @@ a {
 
   display: flex;
   flex-direction: column;
+
+  display: none;
+}
+
+.navigation-btn-login:hover ~ .login-form {
+  display: flex;
 }
 
 .login-form input {
@@ -313,10 +349,10 @@ a {
 
 .login-help-links {
   align-self: flex-end;
-display: flex;
-flex-direction: column;
-margin-top: -45px;
-margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -45px;
+  margin-right: 20px;
 }
 
 .login-help-links a {
@@ -372,7 +408,9 @@ margin-right: 20px;
   background-color: #849d8f;
   background-image: url("../img/icecream/big_icecream_first.png");
   background-repeat: no-repeat;
-  background-position: center -74px;
+  /* background-position: center -74px; */
+  background-position: center top;
+  z-index: 1;
 
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
@@ -414,14 +452,14 @@ margin-right: 20px;
 
 .slider-controls {
   position: absolute;
-  bottom: 63px;
+  bottom: 62px;
   left: 0;
   z-index: 20;
 
   font-size: 0;
 }
 
-.slider-controls label {
+.slider-control {
   display: inline-block;
   width: 17px;
   height: 17px;
@@ -433,6 +471,11 @@ margin-right: 20px;
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-control:hover,
+.slider-control:focus {
+  background-color: rgba(248, 247, 244, 0.4);
 }
 
 #product-1:checked ~ .background-color-wrapper label[for="product-1"],
@@ -480,7 +523,8 @@ margin-right: 20px;
   line-height: 60px;
 
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 31px;
+  margin-top: 70px;
 
   width: 670px;
 }
@@ -657,7 +701,7 @@ margin-right: 20px;
   padding-top: 24px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 40px;
+  margin-top: 38px;
 }
 
 .advantages h2 {
@@ -686,7 +730,7 @@ margin-right: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  padding-top: 24px;
+  padding-top: 21px;
 }
 
 .advantages-list li {
@@ -834,7 +878,7 @@ margin-right: 20px;
   line-height: 22px;
 
   margin: 0;
-  padding-top: 31px;
+  padding-top: 27px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 15px;
@@ -870,6 +914,9 @@ margin-right: 20px;
 .subscription-form input:focus {
   border: 2px solid rgba(154, 154, 154, 0.52);
   outline: none;
+  padding-left: 13px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .subscription-form input:active {
@@ -1054,6 +1101,10 @@ margin-right: 20px;
 .feedback-email input:focus {
   border: 2px solid rgba(154, 154, 154, 0.52);
   outline: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 .feedback-name input:active,
@@ -1192,6 +1243,9 @@ margin-right: 20px;
   width: 1146px;
 }
 
+.inner-body .header {
+  position: relative;
+}
 
 .navigation-links-inner {
   padding-left: 9px;

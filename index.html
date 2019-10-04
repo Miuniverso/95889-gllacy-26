@@ -46,7 +46,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
           </a>
           <!--  Форма поиска по сайту  -->
-          <form action="#" method="get" class="search-form visually-hidden">
+          <form action="#" method="get" class="search-form">
             <label class="visually-hidden" for="search">Форма поиска</label>
             <input class="input" type="text" name="search-input" id="search" placeholder="Крем-брюле">
           </form>
@@ -55,7 +55,7 @@
             Вход
           </a>
           <!--  Форма входа на сайт  -->
-          <form action="#" method="post" class="login-form visually-hidden">
+          <form action="#" method="post" class="login-form">
             <label class="visually-hidden" for="login">Логин</label>
             <input class="input" type="text" name="login-input" id="login" placeholder="email@example.com">
             <label class="visually-hidden" for="password">Пароль</label>
@@ -83,9 +83,9 @@
         <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
         <div class="slider">
           <div class="slider-controls">
-           <label for="product-1">Первый</label>
-           <label for="product-2">Второй</label>
-           <label for="product-3">Третий</label>
+           <label class="slider-control" for="product-1">Первый</label>
+           <label class="slider-control" for="product-2">Второй</label>
+           <label class="slider-control" for="product-3">Третий</label>
          </div>
            <ul class="slider-list">
              <li class="slider-item slide" id="slide1">
