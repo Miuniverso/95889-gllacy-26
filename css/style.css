@@ -649,6 +649,53 @@ a {
   margin-top: 38px;
 }
 
+/* наведение на мороженое */
+
+.fast-look-btn {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+  padding: 10px 18px 12px 18px;
+}
+
+.icecream-background {
+  width: 293px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(248, 247, 244, 0.2);
+
+  padding-top: 350px;
+  padding-bottom: 20px;
+  position: absolute;
+  top: -13px;
+  left: -13px;
+
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+
+  z-index: 1;
+
+  display: none;
+}
+
+.fast-look-btn {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+  padding: 10px 18px 12px 18px;
+  align-self: center;
+
+  z-index: 999;
+  margin-top: -1px;
+}
+
+
+.icecream-item:hover .icecream-background {
+  display: block;
+}
+
 .hit-item::before {
   position: absolute;
   content:"";
@@ -682,6 +729,10 @@ a {
   position: absolute;
   bottom: 68px;
   margin: 0;
+}
+
+.inner-list .price-big {
+  bottom: 60px;
 }
 
 .weight-small {
