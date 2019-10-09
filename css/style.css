@@ -68,6 +68,10 @@ a {
   justify-content: space-between;
 }
 
+.logo-link {
+  margin-bottom: 10px;
+}
+
 .navigation-links-left {
   display: flex;
   align-items: center;
@@ -85,6 +89,12 @@ a {
   justify-content: space-between;
   width: 387px;
   padding-left: 9px;
+
+  padding-top: 7px;
+}
+
+.catalog-link {
+  padding-bottom: 25px;
 }
 
 .navigation-btns-right {
@@ -144,19 +154,6 @@ a {
 
   z-index: 1;
 }
-
-/* для решения вопроса
-с переходом на выпадающее меню
- */
-
-/* .dropdown-navigation::before {
-  position: absolute;
-  content: "";
-  width: 70%;
-  top: -10px;
-  display: block;
-  padding-bottom: 10px;
-} */
 
 .dropdown-navigation a {
   color: #323232;
@@ -647,53 +644,6 @@ a {
   position: relative;
 
   margin-top: 38px;
-}
-
-/* наведение на мороженое */
-
-.fast-look-btn {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-
-  padding: 10px 18px 12px 18px;
-}
-
-.icecream-background {
-  width: 293px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-  background-color: rgba(248, 247, 244, 0.2);
-
-  padding-top: 350px;
-  padding-bottom: 20px;
-  position: absolute;
-  top: -13px;
-  left: -13px;
-
-  display: flex;
-  border-radius: 5px;
-  flex-direction: column;
-
-  z-index: 1;
-
-  display: none;
-}
-
-.fast-look-btn {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-
-  padding: 10px 18px 12px 18px;
-  align-self: center;
-
-  z-index: 999;
-  margin-top: -1px;
-}
-
-
-.icecream-item:hover .icecream-background {
-  display: block;
 }
 
 .hit-item::before {
@@ -1449,14 +1399,63 @@ a {
   margin: 0;
 }
 
-.catalog-list {
-  list-style: none;
-}
-
 /* временно как заглушка под фильтр */
 
 .filter {
   margin-top: 162px;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+/* наведение на мороженое */
+
+.icecream-background {
+  width: 293px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(248, 247, 244, 0.2);
+
+  padding-top: 350px;
+  padding-bottom: 20px;
+  position: absolute;
+  top: -13px;
+  left: -13px;
+  border-radius: 5px;
+
+  display: none;
+}
+
+.fast-look-btn {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+  padding: 10px 18px 12px 18px;
+  align-self: center;
+
+  z-index: 10;
+  margin-top: -1px;
+}
+
+
+.icecream-item:hover .icecream-background {
+  display: block;
+  z-index: 10;
+}
+
+.icecream-item:hover .icecream-img {
+  z-index: 20;
+  position: relative;
+}
+
+.icecream-item:hover .icecream-list-title {
+  z-index: 20;
+  position: relative;
+}
+
+.icecream-item:hover .price-big {
+  z-index: 25;
 }
 
 .paginator {
