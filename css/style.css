@@ -46,10 +46,22 @@ a {
   background-color: #ffffff;
 }
 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 2;
+  cursor: pointer;
+}
+
 /* Навигация */
 
 .header {
-  /* position: relative; */
   position: absolute;
   left: 50%;
   margin-left: -573px;
@@ -69,13 +81,13 @@ a {
 }
 
 .logo-link {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .navigation-links-left {
   display: flex;
   align-items: center;
-  margin-top: 7px;
+  margin-top: -15px;
 }
 
 .navigation-links,
@@ -90,18 +102,30 @@ a {
   width: 387px;
   padding-left: 9px;
 
-  padding-top: 7px;
+  /* padding-top: 3px; */
 }
 
 .catalog-link {
-  padding-bottom: 25px;
+  padding-bottom: 13px;
 }
 
 .navigation-btns-right {
+  padding-bottom: 11px;
+}
+
+.btns-right-list {
+  list-style: none;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 245px;
+
+  padding-top: 4px;
+}
+
+/* список навигационных кнопок справа в каталоге */
+
+.navigation-btns-right .inner-right-list {
+  width: 263px;
 }
 
 .outer-navigation-link {
@@ -116,7 +140,7 @@ a {
   color: #323232;
   background-color: #f7f6f3;
   border-radius: 16px;
-  padding: 7px 14px;
+  padding: 6px 14px;
   margin: 0;
 }
 
@@ -132,7 +156,17 @@ a {
 
 /* Выпадающее меню */
 
+
+/* focus для a11y */
+
+.catalog-link:focus ~ .dropdown-navigation,
 .catalog-link:hover ~ .dropdown-navigation {
+    display: block;
+    z-index: 3;
+}
+
+.catalog-link-inner:focus ~ .dropdown-navigation,
+.catalog-link-inner:hover ~ .dropdown-navigation {
     display: block;
     z-index: 3;
 }
@@ -150,7 +184,7 @@ a {
   left: 157px;
   top: 60px;
   padding-top: 6px;
-  padding-bottom: 7px;
+  padding-bottom: 9px;
 
   z-index: 1;
 }
@@ -210,7 +244,7 @@ a {
   display: block;
 }
 
-.navigation-btn-search {
+.btn-search {
   width: 33px;
   height: 33px;
 
@@ -245,7 +279,13 @@ a {
   display: none;
 }
 
-.navigation-btn-search:hover ~ .search-form {
+/* focus для a11y */
+
+.navigation-btn-search:hover .search-form {
+  display: block;
+}
+
+.btn-search:focus ~ .search-form {
   display: block;
 }
 
@@ -255,8 +295,8 @@ a {
   padding-right: 10px;
 }
 
-.navigation-btn-login,
-.navigation-btn-basket {
+.btn-login,
+.btn-basket {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -269,35 +309,39 @@ a {
   padding: 9px 17px 9px 43px;
 }
 
-.navigation-btn-search:hover,
-.navigation-btn-search:focus,
-.navigation-btn-login:hover,
-.navigation-btn-login:focus {
+.btn-search:hover,
+.btn-search:focus,
+.btn-login:hover,
+.btn-login:focus {
   background-color: #f8f7f4;
   color: #323232;
 }
 
-.navigation-btn-search:hover path,
-.navigation-btn-login:hover path,
-.navigation-btn-search:focus path,
-.navigation-btn-login:focus path {
+.btn-search:hover path,
+.btn-login:hover path,
+.btn-search:focus path,
+.btn-login:focus path {
   fill: #000000;
 }
 
-.navigation-btn-login {
+.btn-login {
   color: #ffffff;
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.2);
 }
 
-.navigation-btn-login svg path {
+.btn-login svg path {
   fill: #ffffff;
 }
 
-.navigation-btn-login svg,
-.navigation-btn-basket svg {
+.btn-login svg,
+.btn-basket svg {
   position: absolute;
   left: 15px;
+}
+
+.navigation-btn-login {
+  padding-bottom: 25px;
 }
 
 /* форма входа */
@@ -321,7 +365,14 @@ a {
   display: none;
 }
 
-.navigation-btn-login:hover ~ .login-form {
+
+/* focus для a11y */
+
+.navigation-btn-login:hover .login-form {
+  display: flex;
+}
+
+.btn-login:focus ~ .login-form {
   display: flex;
 }
 
@@ -369,10 +420,152 @@ a {
   border-bottom: 1px solid rgba(232, 77, 55, 0.3);
 }
 
-.navigation-btn-basket {
+/* .basket-icon-sum,
+.basket-sum {
+  display: none;
+} */
+
+.btn-basket {
   color: #ffffff;
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.2);
+}
+
+.inner-body .btn-basket:hover,
+inner-body .btn-basket:focus {
+  background-color: #f8f7f4;
+  color: #323232;;
+}
+
+/* hover эффект для кнопки корзины */
+
+
+/* ???
+
+При фокусе стиль корзины не меняется внутри
+
+*/
+
+/* .navigation-btn-basket:hover .basket-sum,
+.navigation-btn-basket:hover .basket-icon-sum,
+.navigation-btn-basket:focus .basket-sum,
+.navigation-btn-basket:focus .basket-icon-sum {
+  display: block;
+}
+
+.navigation-btn-basket:hover .basket-empty,
+.navigation-btn-basket:hover .basket-icon-empty,
+.navigation-btn-basket:focus .basket-empty,
+.navigation-btn-basket:focus .basket-icon-empty {
+  display: none;
+} */
+
+/*  список товара в корзине  */
+
+.basket-list {
+  width: 540px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  position: absolute;
+
+  top: 59px;
+  right: 0;
+  padding-bottom: 5px;
+
+  border-radius: 5px;
+
+  z-index: 1;
+
+  display: none;
+}
+
+/* появление списка товаров в корзине */
+
+.navigation-btn-basket:hover .basket-list,
+.navigation-btn-basket:focus .basket-list {
+  display: block;
+}
+
+/* a11y */
+
+.btn-basket:hover ~ .basket-list,
+.btn-basket:focus ~ .basket-list {
+  display: block;
+}
+
+.basket-list-table {
+  padding-top: 2px;
+}
+
+.table-string {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding-top: 14px;
+}
+
+.table-close-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left: 13px;
+}
+
+.icecream-mini {
+  padding-left: 10px;
+}
+
+.item-title,
+.item-price,
+.total-price {
+  color: #323232;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.item-title {
+  width: 220px;
+  padding-left: 15px;
+}
+
+.item-price {
+  padding-left: 25px;
+}
+
+.total-price {
+  padding-left: 28px;
+}
+
+.small-price {
+  color: #999999;
+}
+
+.total-sum {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 15px;
+  padding-top: 18px;
+
+}
+
+.total {
+  color: #323232;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.basket-buy-btn {
+  color: #fefefe;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+  padding: 10px 15px;
+  margin-top: 13px;
 }
 
 /* конец навигации */
@@ -390,13 +583,16 @@ a {
 
   position: absolute;
   right: 0;
-  top: 77px;
+  top: 69px;
 }
 
 .work-time {
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 /* слайдер */
@@ -646,6 +842,10 @@ a {
   margin-top: 38px;
 }
 
+/* .icecream-img {
+  position: relative;
+} */
+
 .hit-item::before {
   position: absolute;
   content:"";
@@ -682,7 +882,7 @@ a {
 }
 
 .inner-list .price-big {
-  bottom: 60px;
+  bottom: 65px;
 }
 
 .weight-small {
@@ -827,7 +1027,6 @@ a {
   border-radius: 15px;
   padding-top: 11px;
   padding-left: 20px;
-  /* padding-bottom: 81px; */
 }
 
 .article-new h2 {
@@ -1028,12 +1227,14 @@ a {
   top: 339px;
   left: 50%;
   margin-left: -239px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-top: 13px;
   padding-left: 26px;
   padding-right: 26px;
   display: flex;
   flex-direction: column;
+
+  z-index: 3;
 }
 
 .close-btn {
@@ -1084,6 +1285,8 @@ a {
   line-height: 24px;
 
   width: 100%;
+  max-width: 428px;
+
   box-sizing: border-box;
   min-height: 155px;
   padding-top: 5px;
@@ -1094,6 +1297,8 @@ a {
 
   border-radius: 5px;
   border: 1px solid rgba(178, 178, 178, 0.52);
+
+  resize: none;
 }
 
 .feedback-name input:hover,
@@ -1266,100 +1471,11 @@ a {
   background-color: #d07058;
 }
 
-.basket-list {
-  width: 540px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-  background-color: #f8f7f4;
-  position: absolute;
-
-  top: 59px;
-  right: 0;
-
-  border-radius: 5px;
-
-  z-index: 1;
-}
-
-.basket-list-table {
-  padding-top: 2px;
-}
-
-.table-string {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  padding-top: 14px;
-}
-
-.table-close-btn {
-  border: none;
-  background: none;
-  padding: 0;
-  margin-left: 13px;
-}
-
-.icecream-mini {
-  padding-left: 10px;
-}
-
-.item-title,
-.item-price,
-.total-price {
-  color: #323232;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-.item-title {
-  width: 220px;
-  padding-left: 15px;
-}
-
-.item-price {
-  padding-left: 25px;
-}
-
-.total-price {
-  padding-left: 28px;
-}
-
-.small-price {
-  color: #999999;
-}
-
-.total-sum {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-right: 15px;
-  padding-top: 18px;
-
-}
-
-.total {
-  color: #323232;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 18px;
-}
-
-.basket-buy-btn {
-  color: #fefefe;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-
-  padding: 10px 15px;
-  margin-top: 13px;
-}
-
 .breadcrumb {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-top: 14px;
+  margin-top: -15px;
 
   display: flex;
   justify-content: space-between;
@@ -1438,7 +1554,7 @@ a {
   margin-top: -1px;
 }
 
-
+.icecream-item:focus .icecream-background,
 .icecream-item:hover .icecream-background {
   display: block;
   z-index: 10;
@@ -1458,11 +1574,22 @@ a {
   z-index: 25;
 }
 
+/* ???
+
+ Надпись ХИТ перекрывается картинкой при наведении
+
+*/
+
+.hit-item:hover ~ .hit-item::before {
+  z-index: 30;
+}
+
+
 .paginator {
   display: flex;
   justify-content: flex-end;
 
-  padding-top: 88px;
+  padding-top: 78px;
   padding-right: 5px;
   padding-bottom: 39px;
 }
@@ -1517,6 +1644,13 @@ a {
   color: #ffffff;
 }
 
+.paginator-item:active {
+  background-color: #ffffff;
+}
+.paginator-item:active a {
+  color: #323232;
+}
+
 .paginator-list::before {
   content:"";
   position: absolute;
@@ -1532,7 +1666,7 @@ a {
 
 
 .paginator-list::after {
-  content:"";
+  content: "";
   position: absolute;
   right: -27px;
   top: 7px;
