@@ -420,45 +420,17 @@ a {
   border-bottom: 1px solid rgba(232, 77, 55, 0.3);
 }
 
-/* .basket-icon-sum,
-.basket-sum {
-  display: none;
-} */
-
 .btn-basket {
   color: #ffffff;
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.2);
 }
 
-.inner-body .btn-basket:hover,
-inner-body .btn-basket:focus {
+.inner-body .btn-basket {
   background-color: #f8f7f4;
   color: #323232;;
 }
 
-/* hover эффект для кнопки корзины */
-
-
-/* ???
-
-При фокусе стиль корзины не меняется внутри
-
-*/
-
-/* .navigation-btn-basket:hover .basket-sum,
-.navigation-btn-basket:hover .basket-icon-sum,
-.navigation-btn-basket:focus .basket-sum,
-.navigation-btn-basket:focus .basket-icon-sum {
-  display: block;
-}
-
-.navigation-btn-basket:hover .basket-empty,
-.navigation-btn-basket:hover .basket-icon-empty,
-.navigation-btn-basket:focus .basket-empty,
-.navigation-btn-basket:focus .basket-icon-empty {
-  display: none;
-} */
 
 /*  список товара в корзине  */
 
@@ -597,11 +569,10 @@ inner-body .btn-basket:focus {
 
 /* слайдер */
 
-.slider-wrapper {
+.background-color-wrapper {
   background-color: #849d8f;
   background-image: url("../img/icecream/big_icecream_first.png");
   background-repeat: no-repeat;
-  /* background-position: center -74px; */
   background-position: center top;
   z-index: 1;
 
@@ -683,31 +654,19 @@ inner-body .btn-basket:focus {
   display: block;
 }
 
-#product-1:checked ~ .background-color-wrapper .slider-wrapper {
+#product-1:checked ~ .background-color-wrapper {
   background-color: #849d8f;
   background-image: url("../img/icecream/big_icecream_first.png");
 }
 
-#product-2:checked ~ .background-color-wrapper .slider-wrapper {
+#product-2:checked ~ .background-color-wrapper {
   background-color: #8996a6;
   background-image: url("../img/icecream/big_icecream_second.png");
 }
 
-#product-3:checked ~  .background-color-wrapper .slider-wrapper {
+#product-3:checked ~  .background-color-wrapper {
   background-color: #9d8b84;
   background-image: url("../img/icecream/big_icecream_third.png");
-}
-
-#product-1:checked ~ .background-color-wrapper {
-  background-color: #849d8f;
-}
-
-#product-2:checked ~ .background-color-wrapper {
-  background-color: #8996a6;
-}
-
-#product-3:checked ~ .background-color-wrapper {
-  background-color: #9d8b84;
 }
 
 .icecream-slide-title {
@@ -842,10 +801,6 @@ inner-body .btn-basket:focus {
   margin-top: 38px;
 }
 
-/* .icecream-img {
-  position: relative;
-} */
-
 .hit-item::before {
   position: absolute;
   content:"";
@@ -854,6 +809,10 @@ inner-body .btn-basket:focus {
 
   background-image: url("../img/svg/hit.svg");
   background-repeat: no-repeat;
+}
+
+.hit-item:hover::before {
+  z-index: 30;
 }
 
 .icecream-list-title {
