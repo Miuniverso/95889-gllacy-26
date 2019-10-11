@@ -135,8 +135,8 @@ a {
   margin: 0 14px;
 }
 
-.outer-navigation-link:hover,
-.outer-navigation-link:focus {
+.outer-navigation-link:hover:not(.on-page-link),
+.outer-navigation-link:focus:not(.on-page-link) {
   color: #323232;
   background-color: #f7f6f3;
   border-radius: 16px;
@@ -1428,6 +1428,8 @@ a {
 
   border-radius: 16px;
   background-color: #d07058;
+
+  margin: 0;
 }
 
 .breadcrumb {
