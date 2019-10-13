@@ -77,57 +77,7 @@
               <a href="#" class="btn-basket" aria-label="Корзина">
                 <svg class="basket-icon-empty" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
                 <span class="basket-empty">Пусто</span>
-                <!-- <svg class="basket-icon-sum" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/></svg>
-                <span class="basket-sum">2 товара</span> -->
               </a>
-
-              <!-- <div class="basket-list">
-                <table class="basket-list-table">
-                  <tr class="table-string">
-                    <td>
-                      <button type="button" name="button" class="table-close-btn" aria-label="Удалить товар из корзины">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
-                      </button>
-                    </td>
-                    <td>
-                      <img src="img/icecream/ic_orange.png" class="icecream-mini" alt="Сливочное с апельсиновым джемом" width="33" height="33">
-                    </td>
-                    <td class="item-title">
-                      Пломбир с апельсиновым джемом
-                    </td>
-                    <td class="item-price">
-                      1,5 кг х <span class="small-price">200 руб.</span>
-                    </td>
-                    <td class="total-price">
-                      300 руб.
-                    </td>
-                  </tr>
-                  <tr class="table-string">
-                    <td>
-                      <button type="button" name="button" class="table-close-btn" aria-label="Удалить товар из корзины">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
-                      </button>
-                    </td>
-                    <td>
-                      <img src="img/icecream/ic_strawberry.png" class="icecream-mini" alt="Сливочно-клубничное" width="33" height="33">
-                    </td>
-                    <td class="item-title">
-                      Клубничный пломбир с присыпкой из белого шоколада
-                    </td>
-                    <td class="item-price">
-                      1,5 кг х <span class="small-price">300 руб.</span>
-                    </td>
-                    <td class="total-price">
-                      450 руб.
-                    </td>
-                  </tr>
-                </table>
-                <p class="total-sum">
-                  <b class="total">Итого: 750 руб.</b>
-                  <a href="#" class="basket-buy-btn orange-btn">Оформить заказ</a>
-              </p>
-            </div> -->
-
             </li>
           </ul>
         </div>
@@ -268,6 +218,7 @@
         </div>
       </div>
       <section class="map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
         <div class="map-information-container content-center">
           <div class="map-information-wrapper">
             <address class="map-information">
@@ -280,7 +231,7 @@
             <a href="#" class="information-btn orange-btn">Форма обратной связи</a>
           </div>
         </div>
-        <iframe class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A80ac807979028182354029e43ac6c493e7bceb0fe5118b085505ba30254212d0&amp;source=constructor" width="100%" height="430" frameborder="0"></iframe>
+        <iframe class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A80ac807979028182354029e43ac6c493e7bceb0fe5118b085505ba30254212d0&amp;source=constructor"></iframe>
       </section>
     </main>
 
@@ -311,7 +262,7 @@
       <ul class="important-links-left">
         <li class="heart-wrapper">
           <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path fill="#FFF" d="M10.799 0c-1.35 0-2.551.65-3.3 1.661A4.097 4.097 0 0 0 4.199 0C1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/></svg>
-          <a href="#" class="link-bold" class="link-underline">Для поставщиков</a>
+          <a href="#" class="link-bold link-underline">Для поставщиков</a>
         </li>
         <li>
           <a href="#" class="link-underline">О производстве</a>
@@ -347,11 +298,12 @@
       <input type="email" name="email-comment-input" id="email-comment" placeholder="email@example.com">
     </p>
     <p class="feedback-comment">
-      <label class="visually-hidden" class="visually-hidden" for="comment">Ваш отзыв</label>
+      <label class="visually-hidden" for="comment">Ваш отзыв</label>
       <textarea name="comment-input" id="comment" placeholder="В свободной форме"></textarea>
     </p>
     <button type="submit" name="button" class="feedback-btn orange-btn">Отправить</button>
   </form>
+</div>
 
   <script src="js/script.js"></script>
 </body>

@@ -754,12 +754,14 @@ a {
 
 .left-action {
   background-image: url(../img/raspberry_bg.png);
+  background-color: #4f0a21;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .right-action {
   background-image: url(../img/chocolate_bg.png);
+  background-color: #492817;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -854,6 +856,7 @@ a {
   max-width: 1107px;
 
   background-image: url("../img/waffle_bg.jpg");
+  background-color: #e9dabf;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
@@ -981,6 +984,7 @@ a {
 .article-new {
   width: 540px;
   background-image: url(../img/strawberry_bg.jpg);
+  background-color: #fcfcfc;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
@@ -1099,7 +1103,12 @@ a {
 /* карта */
 
 .map {
-  margin-top: 40px;
+  margin-top: 38px;
+}
+
+.yandex-map {
+  width: 100%;
+  height: 427px;
 }
 
 /* блок с контактной информацией */
@@ -1130,7 +1139,7 @@ a {
 
   padding-right: 10px;
   padding-left: 26px;
-  padding-top: 28px;
+  padding-top: 31px;
 
   text-align: left;
 }
@@ -1150,7 +1159,7 @@ a {
 }
 
 .information-time {
-  padding-bottom: 26px;
+  padding-bottom: 24px;
 }
 
 .information-tel {
@@ -1174,7 +1183,7 @@ a {
   line-height: 24px;
 
   padding: 10px 27px;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
 }
 
 /* Форма обратной связи  */
@@ -1476,11 +1485,296 @@ a {
   margin: 0;
 }
 
-/* временно как заглушка под фильтр */
+/* Фильтр */
 
 .filter {
-  margin-top: 162px;
+  margin-top: 27px;
 }
+
+.filter-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-interactive {
+  background-color: rgba(248, 247, 244, 0.2);
+  border-radius: 50px;
+}
+
+.form-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  margin: 0 15px 0 0;
+}
+
+.filter-sort,
+.price-wrapper,
+.fatness-wrapper {
+  margin-bottom: 14px;
+}
+
+.form-item-title {
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+
+  padding-left: 14px;
+  padding-bottom: 7px;
+}
+
+/* Сортировка */
+
+.filter-sort {
+  position: relative;
+}
+
+.sort-icon-down {
+  position: absolute;
+  top: 35px;
+  right: 15px;
+}
+
+.icon-color {
+  fill: #ffffff;
+}
+
+
+.form-sort {
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+
+  padding: 8px 32px 8px 15px;
+
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none
+}
+
+.form-sort:hover {
+  color: #323232;
+}
+
+.form-sort:hover ~ .icon-color {
+  fill: #323232;
+}
+
+/* Цена */
+
+.range-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: relative;
+
+  padding: 16px 21px;
+}
+
+.scale {
+  width: 176px;
+  height: 4px;
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.bar {
+  width: 107px;
+  height: 4px;
+  background-color: #f8f7f4;
+
+  margin-left: 20px;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+
+  background-color: #ababab;
+  border-radius: 50px;
+}
+
+.range-toggle:hover {
+  transform: scale(1.1);
+}
+
+.max-price-wrapper {
+  padding-left: 0;
+}
+
+.min-price,
+.max-price {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  width: 24px;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.range-toggle-min {
+  left: 34px;
+}
+
+.range-toggle-max {
+  right: 66px;
+}
+
+/* Жирность */
+
+.fatness-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+
+  padding: 4px 0 5px 12px;
+}
+
+.fatness-item label {
+  position: relative;
+  margin-left: 28px;
+  margin-right: 12px;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  right: 1px;
+
+  bottom: 3px;
+  padding-left: 9px;
+
+  cursor: pointer;
+}
+
+
+.fatness-radio + label::before {
+  content: "";
+
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: -27px;
+  top: -3px;
+
+  background-image: url("../img/svg/radio-off.svg");
+  opacity: 0.8;
+}
+
+.fatness-radio:checked + label::before {
+  background-image: url("../img/svg/radio-on.svg");
+}
+
+.fatness-radio:disabled + label::before {
+  opacity: 0.4;
+}
+
+.fatness-radio:hover + label::before {
+  opacity: 1;
+}
+
+/* Наполнители */
+
+.fillers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+
+  padding: 9px 0 9px 12px;
+}
+
+.filler-item {
+  position: relative;
+}
+
+.checkbox-item + label::before {
+  content: "";
+
+  position: absolute;
+  top: -3px;
+  left: -1px;
+
+  width: 26px;
+  height: 23px;
+
+  background-image: url("../img/svg/checkbox-off.svg");
+  background-repeat: no-repeat;
+  opacity: 0.8;
+
+  cursor: pointer;
+}
+
+.checkbox-item:checked + label::before {
+  background-image: url("../img/svg/checkbox-on.svg");
+}
+
+.checkbox-item:disabled + label::before {
+  opacity: 0.4;
+}
+
+.checkbox-item:hover + label::before {
+  opacity: 1;
+}
+
+.filler-item label {
+  padding-left: 33px;
+  padding-right: 21px;
+}
+
+.filter-btn {
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+
+  border: 2px solid #ffffff;
+
+  padding: 7px 27px;
+  margin-left: -4px;
+  margin-top: 23px;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.filter-btn:active {
+  box-shadow: inset 0 2px 1px #696969;
+  background-color: #ededed;
+}
+
 
 .catalog-list {
   list-style: none;
@@ -1550,7 +1844,7 @@ a {
   display: flex;
   justify-content: flex-end;
 
-  padding-top: 78px;
+  padding-top: 82px;
   padding-right: 5px;
   padding-bottom: 39px;
 }
