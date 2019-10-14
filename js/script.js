@@ -2,7 +2,6 @@ let feedbackBtn = document.querySelector(".information-btn");
 let feedbackForm = document.querySelector(".feedback-form");
 let overlay = document.querySelector(".overlay");
 let closeFormBtn = document.querySelector(".feedback-close-btn");
-let form = document.querySelector(".feedback-form");
 let name = feedbackForm.querySelector("[name=name-last-name-input]");
 let email = feedbackForm.querySelector("[name=email-comment-input]");
 let comment = feedbackForm.querySelector("[name=comment-input]");
@@ -17,6 +16,8 @@ let storage = "";
    isStorageSupport = false;
  }
 
+
+// Открытие формы
 
 feedbackBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -37,11 +38,16 @@ feedbackBtn.addEventListener("click", function (evt) {
       }
 })
 
+// Закрытие формы
+
 closeFormBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackForm.classList.add("visually-hidden");
   overlay.classList.add("visually-hidden");
+  feedbackForm.classList.remove("modal-error");
 })
+
+// закрытие по esc
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
@@ -49,14 +55,20 @@ window.addEventListener("keydown", function (evt) {
       if (!feedbackForm.classList.contains("visually-hidden")) {
         console.log("Форма открыта")
         feedbackForm.classList.add("visually-hidden");
+        feedbackForm.classList.remove("modal-error");
         overlay.classList.add("visually-hidden");
       }
     }
   });
 
-form.addEventListener("submit", function(evt) {
+  // проверка заполненности формы
+
+feedbackForm.addEventListener("submit", function(evt) {
   if (!name.value || !email.value || !comment.value) {
       evt.preventDefault();
+      feedbackForm.classList.remove("modal-error");
+      feedbackForm.offsetWidth = feedbackForm.offsetWidth;
+      feedbackForm.classList.add("modal-error")
       console.log("Нужно заполнить все поля");
     } else {
       if(isStorageSupport) {
@@ -65,6 +77,8 @@ form.addEventListener("submit", function(evt) {
       }
     }
 })
+
+// Фоновое затемнение
 
 overlay.addEventListener("click", function (evt) {
   evt.preventDefault();
