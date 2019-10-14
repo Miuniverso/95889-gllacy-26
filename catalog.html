@@ -141,11 +141,11 @@
           <div class="filter-part">
             <fieldset class="form-item filter-sort">
               <legend class="form-item-title">Сортировка:</legend>
-              <select name="type-sort" class="form-sort form-interactive">
-                <option name="type-popularity" selected>по популярности</option>
-                <option name="type-cheap">сначала недорогие</option>
-                <option name="type-expensive">сначала дорогие</option>
-                <option name="type-fatness">по жирности</option>
+              <select class="form-sort form-interactive">
+                <option selected>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
               </select>
               <svg class="sort-icon-down" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                 <path class="icon-color" fill="#231F20" d="M5.5 10L0 0h11"/>
@@ -199,7 +199,7 @@
               <legend class="form-item-title">Наполнители:</legend>
               <ul class="fillers form-interactive">
                 <li class="filler-item">
-                  <input type="checkbox" id="chocolate" name="" class="visually-hidden checkbox-item" checked/>
+                  <input type="checkbox" id="chocolate" name="check-chocolate" class="visually-hidden checkbox-item" checked/>
                   <label for="chocolate">шоколадные</label>
                 </li>
                 <li class="filler-item">
@@ -207,7 +207,7 @@
                   <label for="sugar">сахарные присыпки</label>
                 </li>
                 <li class="filler-item">
-                  <input type="checkbox" id="fruits" name="check-fruits" class="visually-hidden checkbox-item" disabled/>
+                  <input type="checkbox" id="fruits" name="check-fruits" class="visually-hidden checkbox-item"/>
                   <label for="fruits">фрукты</label>
                 </li>
                 <li class="filler-item">
@@ -229,9 +229,9 @@
       <ul class="icecream-list inner-list">
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_orange.png" alt="Сливочное с апельсиновым джемом" width="267" height="267">
-          <p class="price-big">310₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">310<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
-            <a href="#" class="link-underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a href="#" class="link-underline icecream-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </h3>
           <div class="icecream-background">
             <a href="#" class="fast-look-btn orange-btn">Быстрый просмотр</a>
@@ -239,9 +239,9 @@
         </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_coffee.png" alt="Сливочно-кофейное" width="267" height="267">
-          <p class="price-big">380₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">380<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
-            <a href="#" class="link-underline">Сливочно-кофейное с кусочками шоколада</a>
+            <a href="#" class="link-underline icecream-title">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
           <div class="icecream-background">
             <a href="#" class="fast-look-btn orange-btn">Быстрый просмотр</a>
@@ -249,9 +249,9 @@
       </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_strawberry.png" alt="Сливочно-клубничное" width="267" height="267">
-          <p class="price-big">355₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">355<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
-            <a href="#" class="link-underline">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a href="#" class="link-underline icecream-title">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </h3>
           <div class="icecream-background">
             <a href="#" class="fast-look-btn orange-btn">Быстрый просмотр</a>
@@ -259,7 +259,7 @@
         </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_caramel.png" alt="Сливочное крем-брюле" width="267" height="267">
-          <p class="price-big">415₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">415<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
             <a href="#" class="link-underline">Сливочное крем-брюле с карамельной подливкой</a>
           </h3>
@@ -269,7 +269,7 @@
         </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_cowberry.png" alt="Сливочное с брусничным джемом" width="267" height="267">
-          <p class="price-big">325₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">325<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
             <a href="#" class="link-underline">Сливочное с брусничным джемом</a>
           </h3>
@@ -279,7 +279,7 @@
         </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_blueberry.png" alt="Сливочно-черничное" width="267" height="267">
-          <p class="price-big">410₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">410<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
             <a href="#" class="link-underline">Сливочно-черничное с цельными ягодами черники</a>
           </h3>
@@ -289,7 +289,7 @@
         </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_lemon.png" alt="Сливочно-лимонное" width="267" height="267">
-          <p class="price-big">375₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">375<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
             <a href="#" class="link-underline">Сливочно-лимонное с карамельной присыпкой</a>
           </h3>
@@ -299,7 +299,7 @@
         </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_chocolate_chip.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
-          <p class="price-big">320₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">320<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
             <a href="#" class="link-underline">Сливочное с шоколадной стружкой</a>
           </h3>
@@ -309,7 +309,7 @@
         </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_chocolate_vanilla.png" alt="Сливочно-ванильное" width="267" height="267">
-          <p class="price-big">440₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">440<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
             <a href="#" class="link-underline">Сливочно-ванильное с кусочками шоколада</a>
           </h3>
@@ -319,7 +319,7 @@
         </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_menthol.png" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
-          <p class="price-big">435₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">435<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
             <a href="#" class="link-underline">Сливочноe с ментоловым сиропом</a>
           </h3>
@@ -329,7 +329,7 @@
         </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_dark_chocolate.png" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
-          <p class="price-big">355₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">355<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
             <a href="#" class="link-underline">Сливочное с кусочками черного шоколада</a>
           </h3>
@@ -339,7 +339,7 @@
         </li>
         <li class="icecream-item">
           <img class="icecream-img" src="img/icecream/ic_mint.png" alt="Сливочное с мятным сиропом" width="267" height="267">
-          <p class="price-big">420₽<span class="weight-small">/кг</span></p>
+          <p class="price-big">420<span class="weight-small">/кг</span></p>
           <h3 class="icecream-list-title">
             <a href="#" class="link-underline">Сливочное с мятным сиропом</a>
             </h3>

@@ -22,20 +22,19 @@ let storage = "";
 feedbackBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackForm.classList.remove("visually-hidden");
+  feedbackForm.classList.add("modal-show");
   overlay.classList.remove("visually-hidden");
-  if (storageName) {
-      name.value = storageName;
-      email.focus();
-    } else {
-      name.focus();
-    }
 
-    if (storageEmail) {
-        email.value = storageEmail;
-        comment.focus();
-      } else {
-        email.focus();
-      }
+  if(storageName || storageEmail) {
+    name.value = storageName;
+    email.value = storageEmail;
+    comment.focus();
+  } else if (storageName) {
+    name.value = storageName;
+    email.focus();
+  } else {
+    name.focus();
+  }
 })
 
 // Закрытие формы
@@ -45,6 +44,7 @@ closeFormBtn.addEventListener("click", function (evt) {
   feedbackForm.classList.add("visually-hidden");
   overlay.classList.add("visually-hidden");
   feedbackForm.classList.remove("modal-error");
+  feedbackForm.classList.remove("modal-show");
 })
 
 // закрытие по esc
