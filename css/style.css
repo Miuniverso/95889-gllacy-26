@@ -213,10 +213,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 387px;
+  width: 395px;
   padding-left: 9px;
-
-  /* padding-top: 3px; */
+  padding-right: 7px;
 }
 
 .catalog-link {
@@ -444,7 +443,8 @@ a {
           align-items: center;
 
   position: relative;
-  padding: 9px 17px 9px 43px;
+  padding: 8px 17px 8px 15px;
+  /* padding: 9px 17px 9px 43px; */
 }
 
 .btn-search:hover,
@@ -474,8 +474,9 @@ a {
 
 .btn-login svg,
 .btn-basket svg {
-  position: absolute;
-  left: 15px;
+  /* position: absolute;
+  left: 15px; */
+  padding-right: 7px;
 }
 
 .navigation-btn-login {
@@ -871,10 +872,15 @@ a {
   line-height: 60px;
 
   margin: 0 auto;
-  margin-bottom: 31px;
-  margin-top: 70px;
+  /* margin-bottom: 31px;
+  margin-top: 70px; */
 
-  width: 670px;
+  /* width: 670px; */
+
+  margin-bottom: 29px;
+  margin-top: 72px;
+
+  width: 710px;
 }
 
 .orange-btn {
