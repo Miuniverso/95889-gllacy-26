@@ -472,9 +472,13 @@ a {
 .table-string {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
 
   padding-top: 14px;
+}
+
+.table-close-btn-sting {
+  padding-top: 9px;
 }
 
 .table-close-btn {
@@ -482,6 +486,11 @@ a {
   background: none;
   padding: 0;
   margin-left: 13px;
+}
+
+.icecream-mini-string {
+  padding-top: 2px;
+  padding-left: 3px;
 }
 
 .icecream-mini {
@@ -499,15 +508,18 @@ a {
 
 .item-title {
   width: 220px;
-  padding-left: 15px;
+  padding-left: 12px;
+  padding-top: 10px;
 }
 
 .item-price {
   padding-left: 25px;
+  padding-top: 10px;
 }
 
 .total-price {
   padding-left: 28px;
+  padding-top: 10px;
 }
 
 .small-price {
@@ -519,8 +531,8 @@ a {
   flex-direction: column;
   align-items: flex-end;
   padding-right: 15px;
-  padding-top: 18px;
-
+  padding-top: 12px;
+  padding-bottom: 1px;
 }
 
 .total {
