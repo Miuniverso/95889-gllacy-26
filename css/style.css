@@ -835,7 +835,7 @@ a {
   line-height: 22px;
 
   margin: 0;
-  padding-top: 7px;
+  padding-top: 8px;
 
   padding-left: 5px;
   padding-right: 5px;
@@ -926,7 +926,7 @@ a {
   content:"";
   width: 49px;
   height: 49px;
-  background-image: url(../img/svg/ice-cream.svg);
+  background-image: url("../img/svg/ice-cream.svg");
   background-repeat: no-repeat;
   top: -13px;
   left: 0px;
@@ -942,7 +942,7 @@ a {
   content:"";
   width: 49px;
   height: 49px;
-  background-image: url(../img/svg/cow.svg);
+  background-image: url("../img/svg/cow.svg");
   background-repeat: no-repeat;
   top: -13px;
   left: 0px;
@@ -959,7 +959,7 @@ a {
   content:"";
   width: 49px;
   height: 49px;
-  background-image: url(../img/svg/eco.svg);
+  background-image: url("../img/svg/eco.svg");
   background-repeat: no-repeat;
   top: -13px;
   left: 0px;
@@ -995,12 +995,12 @@ a {
 
 .article-new {
   width: 540px;
-  background-image: url(../img/strawberry_bg.jpg);
+  background-image: url("../img/strawberry_bg.jpg");
   background-color: #fcfcfc;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
-  padding-top: 11px;
+  padding-top: 9px;
   padding-left: 20px;
 }
 
@@ -1034,7 +1034,7 @@ a {
 
 .subscription {
   width: 560px;
-  background: url(../img/svg/bg-post.svg);
+  background: url("../img/svg/bg-post.svg");
   border-radius: 15px;
 }
 
@@ -1053,11 +1053,10 @@ a {
   line-height: 22px;
 
   margin: 0;
-  padding-top: 27px;
+  padding-top: 32px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 15px;
-
+  padding-bottom: 10px;
 }
 
 .subscription-input-wrapper {
@@ -1317,7 +1316,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   padding-bottom: 22px;
 }
 
@@ -1328,6 +1327,10 @@ a {
   display: flex;
   margin-left: 2px;
   margin-top: 28px;
+}
+
+.main-footer .social-links {
+  margin-top: 31px;
 }
 
 .social-link-item {
@@ -1357,7 +1360,12 @@ a {
 .important-links {
   display: flex;
   flex-direction: row;
-  padding-top: 16px;
+  padding-top: 19px;
+  padding-right: 3px;
+}
+
+.main-footer .important-links {
+  padding-top: 24px;
 }
 
 .important-links-left,
@@ -1367,14 +1375,24 @@ a {
   padding: 0;
 }
 
-.heart-wrapper {
-  position: relative;
+.important-links-left li,
+.important-links-right li {
+  line-height: 20px;
 }
 
 .heart {
+  position: relative;
+}
+
+.heart::before {
   position: absolute;
-  top: 10px;
-  left: -23px;
+  content: "";
+  top: 8px;
+  left: -22px;
+
+  width: 15px;
+  height: 13px;
+  background-image: url("../img/svg/heart.svg");
 }
 
 
@@ -1398,6 +1416,10 @@ a {
   flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.main-footer .copiright {
+  margin-top: 3px;
 }
 
 .htmlacademy-logo {
@@ -1841,22 +1863,19 @@ a {
   z-index: 25;
 }
 
-/* ???
-
- Надпись ХИТ перекрывается картинкой при наведении
-
-*/
-
 .hit-item:hover ~ .hit-item::before {
   z-index: 30;
 }
 
+.hit-item .icecream-list-title {
+  padding-top: 6px;
+}
 
 .paginator {
   display: flex;
   justify-content: flex-end;
 
-  padding-top: 82px;
+  padding-top: 80px;
   padding-right: 5px;
   padding-bottom: 39px;
 }
