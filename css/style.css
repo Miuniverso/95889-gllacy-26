@@ -494,7 +494,7 @@ a {
   z-index: 1;
   top: 59px;
   right: 109px;
-  padding-bottom: 8px;
+  padding-bottom: 25px;
 
   border-radius: 5px;
 
@@ -528,7 +528,7 @@ a {
 
 .login-form input {
   width: 209px;
-  margin-top: 21px;
+  margin-top: 20px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -542,22 +542,22 @@ a {
   -ms-flex-item-align: start;
 
       align-self: flex-start;
-  margin-left: 16px;
-  padding: 10px 26px;
-  margin-top: 18px;
+  margin-left: 18px;
+  padding: 10px 25px;
+  margin-top: 20px;
 }
 
 .login-help-links {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: -45px;
+          flex-direction: column; */
+  margin-top: -41px;
   margin-right: 20px;
 }
 
