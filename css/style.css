@@ -1954,40 +1954,40 @@ a {
 
   position: relative;
 
-  padding: 16px 21px;
-  /* padding: 8px 68px 8px 36px; */
+  /* padding: 16px 21px; */
+  padding: 8px 68px 8px 36px;
 }
 
 .scale {
 /* при абслют  */
 
-  width: 176px;
-  height: 4px;
-  background-color: rgba(248, 247, 244, 0.5);
-  margin-left: 2px;
-
-
   /* width: 176px;
   height: 4px;
   background-color: rgba(248, 247, 244, 0.5);
-  margin-left: -13px; */
+  margin-left: 2px; */
+
+
+  width: 176px;
+  height: 4px;
+  background-color: rgba(248, 247, 244, 0.5);
+  margin-left: -13px;
 }
 
 .bar {
-  width: 107px;
+  /* width: 107px;
   height: 4px;
   background-color: #f8f7f4;
 
-  margin-left: 20px;
+  margin-left: 20px; */
 
-  /* width: 105px;
+  width: 105px;
   height: 4px;
   background-color: #f8f7f4;
-  margin-left: 22px; */
+  margin-left: 22px;
 }
 
 .range-toggle {
-  position: absolute;
+  /* position: absolute; */
   width: 4px;
   height: 4px;
 
@@ -2023,13 +2023,13 @@ a {
 }
 
 .range-toggle-min {
-  left: 36px;
-  /* margin-left: -163px; */
+  /* left: 36px; */
+  margin-left: -163px;
 }
 
 .range-toggle-max {
-  right: 66px;
-  /* margin-left: 78px; */
+  /* right: 66px; */
+  margin-left: 78px;
 }
 
 /* Жирность */
