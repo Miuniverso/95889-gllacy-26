@@ -243,6 +243,7 @@ a {
 
 .navigation-btns-right .inner-right-list {
   width: 263px;
+  padding-top: 7px;
 }
 
 .outer-navigation-link {
@@ -443,7 +444,8 @@ a {
           align-items: center;
 
   position: relative;
-  padding: 8px 17px 8px 15px;
+  padding: 6px 17px 6px 15px;
+
   /* padding: 9px 17px 9px 43px; */
 }
 
@@ -1795,7 +1797,7 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: -15px;
+  margin-top: -16px;
 
   display: -webkit-box;
 
@@ -1839,12 +1841,13 @@ a {
   line-height: 41px;
 
   margin: 0;
+  padding-top: 2px;
 }
 
 /* Фильтр */
 
 .filter {
-  margin-top: 27px;
+  margin-top: 25px;
 }
 
 .filter-part {
@@ -2179,6 +2182,10 @@ a {
   list-style: none;
 }
 
+.inner-list {
+  margin-top: 2px;
+}
+
 /* наведение на мороженое */
 
 .icecream-background {
@@ -2247,7 +2254,7 @@ a {
       -ms-flex-pack: end;
           justify-content: flex-end;
 
-  padding-top: 80px;
+  padding-top: 79px;
   padding-right: 5px;
   padding-bottom: 39px;
 }
