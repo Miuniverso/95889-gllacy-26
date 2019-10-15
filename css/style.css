@@ -1905,7 +1905,7 @@ a {
 .sort-icon-down {
   position: absolute;
   top: 35px;
-  right: 15px;
+  right: 13px;
 }
 
 .icon-color {
@@ -1914,6 +1914,8 @@ a {
 
 
 .form-sort {
+  position: relative;
+
   color: #ffffff;
   font-family: inherit;
   font-size: 16px;
@@ -1952,36 +1954,40 @@ a {
 
   position: relative;
 
-  /* padding: 16px 21px; */
-  padding: 8px 68px 8px 36px;
+  padding: 16px 21px;
+  /* padding: 8px 68px 8px 36px; */
 }
 
 .scale {
-  /* width: 176px;
-  height: 4px;
-  background-color: rgba(248, 247, 244, 0.5); */
+/* при абслют  */
 
   width: 176px;
   height: 4px;
   background-color: rgba(248, 247, 244, 0.5);
-  margin-left: -13px;
+  margin-left: 2px;
+
+
+  /* width: 176px;
+  height: 4px;
+  background-color: rgba(248, 247, 244, 0.5);
+  margin-left: -13px; */
 }
 
 .bar {
-  /* width: 107px;
+  width: 107px;
   height: 4px;
   background-color: #f8f7f4;
 
-  margin-left: 20px; */
+  margin-left: 20px;
 
-  width: 105px;
+  /* width: 105px;
   height: 4px;
   background-color: #f8f7f4;
-  margin-left: 22px;
+  margin-left: 22px; */
 }
 
 .range-toggle {
-  /* position: absolute; */
+  position: absolute;
   width: 4px;
   height: 4px;
 
@@ -2017,13 +2023,13 @@ a {
 }
 
 .range-toggle-min {
-  /* left: 34px; */
-  margin-left: -163px;
+  left: 36px;
+  /* margin-left: -163px; */
 }
 
 .range-toggle-max {
-  /* right: 66px; */
-  margin-left: 78px;
+  right: 66px;
+  /* margin-left: 78px; */
 }
 
 /* Жирность */
@@ -2072,7 +2078,7 @@ a {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  
+
   right: 3px;
   bottom: 3px;
   padding-left: 9px;
