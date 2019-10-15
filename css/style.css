@@ -1931,6 +1931,12 @@ a {
     appearance: none;
 }
 
+/* IE */
+
+.form-sort::-ms-expand {
+  display: none;
+}
+
 .form-sort:hover {
   color: #323232;
 }
