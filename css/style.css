@@ -1080,7 +1080,7 @@ a {
 }
 
 .inner-list .price-big {
-  bottom: 64px;
+  bottom: 66px;
   left: -2px;
 }
 
@@ -1904,7 +1904,7 @@ a {
 
 .sort-icon-down {
   position: absolute;
-  top: 35px;
+  top: 36px;
   right: 13px;
 }
 
@@ -1923,7 +1923,7 @@ a {
   line-height: 18px;
   border: none;
 
-  padding: 8px 32px 8px 15px;
+  padding: 9px 32px 9px 15px;
 
   -webkit-appearance: none;
     -moz-appearance: none;
@@ -1955,7 +1955,7 @@ a {
   position: relative;
 
   /* padding: 16px 21px; */
-  padding: 8px 68px 8px 36px;
+  padding: 8px 66px 8px 36px;
 }
 
 .scale {
@@ -2049,7 +2049,7 @@ a {
       -ms-flex-direction: row;
           flex-direction: row;
 
-  padding: 4px 0 5px 12px;
+  padding: 4px 2px 5px 12px;
 }
 
 .fatness-item label {
@@ -2080,7 +2080,7 @@ a {
   line-height: 18px;
 
   right: 3px;
-  bottom: 3px;
+  bottom: 1px;
   padding-left: 9px;
   cursor: pointer;
 }
@@ -2092,8 +2092,8 @@ a {
   position: absolute;
   width: 25px;
   height: 25px;
-  left: -26px;
-  top: -2px;
+  left: -25px;
+  top: -5px;
 
   background-image: url("../img/svg/radio-off.svg");
   opacity: 0.8;
