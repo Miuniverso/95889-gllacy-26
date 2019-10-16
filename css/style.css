@@ -643,7 +643,7 @@ a {
           flex-direction: row;
   /* align-items: center; */
 
-  padding-top: 14px;
+  /* padding-top: 14px; */
 
   /* new */
   padding-bottom: 15px;
@@ -715,6 +715,7 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin: 0;
   padding-right: 15px;
   padding-top: 12px;
   /* padding-bottom: 1px; */
