@@ -709,6 +709,18 @@ a {
   padding-bottom: 1px;
 }
 
+.total-sum::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 510px;
+
+  right: 15px;
+  bottom: 111px;
+
+  background-color: #cacac7;
+  }
+
 .total {
   color: #323232;
   font-size: 15px;
@@ -1395,11 +1407,17 @@ a {
 
 .map {
   margin-top: 38px;
-}
-
-.yandex-map {
+  position: relative;
   width: 100%;
   height: 427px;
+  background: url("../img/map.jpg") no-repeat center;
+}
+
+.interactive-map {
+  width: 100%;
+  height: 427px;
+  z-index: 1;
+  position: absolute;
 }
 
 /* блок с контактной информацией */
@@ -1419,6 +1437,7 @@ a {
   border-radius: 15px;
 
   text-align: center;
+  z-index: 2;
 }
 
 .map-information {
