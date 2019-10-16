@@ -610,7 +610,7 @@ a {
 
   z-index: 1;
 
-  display: none;
+  /* display: none; */
 }
 
 /* появление списка товаров в корзине */
@@ -631,6 +631,11 @@ a {
   /* padding-top: 2px; */
 
   padding-top: 17px;
+  border-collapse: collapse;
+}
+
+.basket-list-table .table-string:first-child {
+  padding-top: 19px;
 }
 
 .table-string {
@@ -717,7 +722,7 @@ a {
           align-items: flex-end;
   margin: 0;
   padding-right: 15px;
-  padding-top: 12px;
+  padding-top: 15px;
   /* padding-bottom: 1px; */
 }
 
