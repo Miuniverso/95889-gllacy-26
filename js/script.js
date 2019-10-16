@@ -85,3 +85,29 @@ overlay.addEventListener("click", function (evt) {
   feedbackForm.classList.add("visually-hidden");
   overlay.classList.add("visually-hidden");
 })
+
+// Кастомный маркер мороженки на карте
+
+ymaps.ready(function () {
+    var myMap = new ymaps.Map("map", {
+            center: [59.938631, 30.323055],
+            zoom: 17
+        }, {
+            searchControlProvider: "yandex#search"
+        }),
+
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            "<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>"
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: "Gllacy Shop",
+        }, {
+            iconLayout: "default#image",
+            iconImageHref: "../img/svg/pin.svg",
+            iconImageSize: [80, 140],
+            iconImageOffset: [-50, -140]
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+});

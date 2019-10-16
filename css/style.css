@@ -781,7 +781,6 @@ a {
 .slider-wrapper::before,
 .slider-wrapper::after {
   content: "";
-
   visibility: hidden;
 }
 
@@ -1900,6 +1899,13 @@ a {
 
 .filter-sort {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .sort-icon-down {
@@ -2021,7 +2027,7 @@ a {
   margin: 0;
   border: none;
   background: transparent;
-  width: 24px;
+  width: 26px;
 
   color: #ffffff;
   font-size: 14px;
@@ -2060,22 +2066,6 @@ a {
 }
 
 .fatness-item label {
-  /* position: relative;
-  margin-left: 28px;
-  margin-right: 12px;
-  color: #ffffff;
-
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18px;
-  right: 1px;
-
-  bottom: 3px;
-  padding-left: 9px;
-
-  cursor: pointer; */
-
   position: relative;
   margin-left: 28px;
   margin-right: 12px;
@@ -2099,8 +2089,8 @@ a {
   position: absolute;
   width: 25px;
   height: 25px;
-  left: -25px;
-  top: -5px;
+  left: -24px;
+  top: -4px;
 
   background-image: url("../img/svg/radio-off.svg");
   opacity: 0.8;
