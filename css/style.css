@@ -628,7 +628,9 @@ a {
 }
 
 .basket-list-table {
-  padding-top: 2px;
+  /* padding-top: 2px; */
+
+  padding-top: 17px;
 }
 
 .table-string {
@@ -642,10 +644,16 @@ a {
   /* align-items: center; */
 
   padding-top: 14px;
+
+  /* new */
+  padding-bottom: 15px;
+  padding-right: 31px;
 }
 
 .table-close-btn-sting {
-  padding-top: 9px;
+  /* padding-top: 9px; */
+
+  padding-top: 8px;
 }
 
 .table-close-btn {
@@ -656,8 +664,10 @@ a {
 }
 
 .icecream-mini-string {
-  padding-top: 2px;
-  padding-left: 3px;
+  /* padding-top: 2px; */
+  /* padding-left: 3px; */
+
+  padding-left: 4px;
 }
 
 .icecream-mini {
@@ -685,8 +695,9 @@ a {
 }
 
 .total-price {
-  padding-left: 28px;
+  /* padding-left: 28px; */
   padding-top: 10px;
+  padding-left: 27px;
 }
 
 .small-price {
@@ -706,7 +717,7 @@ a {
           align-items: flex-end;
   padding-right: 15px;
   padding-top: 12px;
-  padding-bottom: 1px;
+  /* padding-bottom: 1px; */
 }
 
 .total-sum::before {
@@ -736,6 +747,8 @@ a {
 
   padding: 10px 15px;
   margin-top: 13px;
+/* new */
+  margin-bottom: 17px;
 }
 
 /* конец навигации */
