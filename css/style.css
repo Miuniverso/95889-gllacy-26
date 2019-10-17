@@ -2376,11 +2376,15 @@ a {
 }
 
 .paginator-item a {
-  color: #323232;
+  color: #ffffff;
 }
 
 .paginator-item-current {
   background-color: #ffffff;
+}
+
+.paginator-item-current a {
+  color: #323232;
 }
 
 .paginator-item:hover,
