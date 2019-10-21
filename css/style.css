@@ -610,7 +610,7 @@ a {
 
   z-index: 1;
 
-  /* display: none; */
+  display: none;
 }
 
 /* появление списка товаров в корзине */
