@@ -57,10 +57,23 @@ window.addEventListener('keydown', function (evt) {
         feedbackForm.classList.add('visually-hidden');
         feedbackForm.classList.remove('modal-error');
         overlay.classList.add('visually-hidden');
+        feedbackForm.classList.remove('modal-show');
       }
     }
   });
 
+//  закрытие формы при нажатии куда-либо кроме формы 
+
+overlay.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  if (!feedbackForm.classList.contains('visually-hidden')) {
+    console.log('Форма открыта')
+    feedbackForm.classList.add('visually-hidden');
+    feedbackForm.classList.remove('modal-error');
+    overlay.classList.add('visually-hidden');
+    feedbackForm.classList.remove('modal-show');
+  }
+})
   // проверка заполненности формы
 
 feedbackForm.addEventListener('submit', function(evt) {

@@ -96,7 +96,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
   color: #ffffff;
@@ -105,7 +105,6 @@ body {
 
    min-width: 1200px;
 }
-
 
 a {
   text-decoration: none;
@@ -148,8 +147,10 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.3);
   z-index: 2;
+
+  background-color: rgba(0,0,0,0.3);
+
   cursor: pointer;
 }
 
@@ -158,8 +159,9 @@ a {
 .header {
   position: absolute;
   left: 50%;
-  margin-left: -573px;
   width: 1146px;
+  margin-left: -573px;
+
   z-index: 2;
 }
 
@@ -214,6 +216,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 395px;
+
   padding-left: 9px;
   padding-right: 7px;
 }
@@ -228,6 +231,7 @@ a {
 
 .btns-right-list {
   list-style: none;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,8 +260,9 @@ a {
 .outer-navigation-link:hover:not(.on-page-link),
 .outer-navigation-link:focus:not(.on-page-link) {
   color: #323232;
-  background-color: #f7f6f3;
   border-radius: 16px;
+  background-color: #f7f6f3;
+
   padding: 6px 14px;
   margin: 0;
 }
@@ -275,7 +280,6 @@ a {
 }
 
 /* Выпадающее меню */
-
 
 /* focus для a11y */
 
@@ -424,23 +428,26 @@ a {
 }
 
 .search-form input {
+  font-weight: 700;
+
   width: 310px;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 12px;
   padding-bottom: 12px;
-  font-weight: 700;
 }
 
 .search-form input:hover {
   border: 2px solid rgba(154, 154, 154, 0.52);
   outline: none;
+
   padding: 11px 9px;
 }
 
 .search-form input:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
   background-color: #ffffff;
+
   padding: 11px 9px;
 }
 
@@ -508,6 +515,7 @@ a {
 
 .btn-login {
   color: #ffffff;
+
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.2);
 }
@@ -553,7 +561,6 @@ a {
 
   display: none;
 }
-
 
 /* focus для a11y */
 
@@ -662,7 +669,6 @@ a {
   color: #323232;;
 }
 
-
 /*  список товара в корзине  */
 
 .basket-list {
@@ -714,6 +720,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+
   padding-bottom: 15px;
   padding-right: 31px;
 }
@@ -741,6 +748,7 @@ a {
 .item-price,
 .total-price {
   color: #323232;
+
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
@@ -758,7 +766,6 @@ a {
 }
 
 .total-price {
-  /* padding-left: 28px; */
   padding-top: 10px;
   padding-left: 27px;
 }
@@ -778,10 +785,10 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+
   margin: 0;
   padding-right: 15px;
   padding-top: 15px;
-  /* padding-bottom: 1px; */
 }
 
 .total-sum::before {
@@ -797,21 +804,22 @@ a {
   }
 
 .total {
-  color: #323232;
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
+
+  color: #323232;
 }
 
 .basket-buy-btn {
-  color: #fefefe;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
 
+  color: #fefefe;
+
   padding: 10px 15px;
   margin-top: 13px;
-/* new */
   margin-bottom: 17px;
 }
 
@@ -966,11 +974,6 @@ a {
   line-height: 60px;
 
   margin: 0 auto;
-  /* margin-bottom: 31px;
-  margin-top: 70px; */
-
-  /* width: 670px; */
-
   margin-bottom: 29px;
   margin-top: 72px;
 
@@ -1020,7 +1023,6 @@ a {
   margin-bottom: 40px;
 }
 
-
 /* акции */
 
 .actions {
@@ -1032,7 +1034,6 @@ a {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-
 }
 
 .actions h2 {
@@ -1071,7 +1072,6 @@ a {
   border-radius: 15px;
 }
 
-
 .left-action {
   background-image: url(../img/raspberry_bg.png);
   background-color: #4f0a21;
@@ -1107,29 +1107,40 @@ a {
 }
 
 .icecream-list {
-  list-style: none;
-  margin: 0;
+  text-align: center;
+
+  width: 1172px;
+  margin: 0 auto;
   padding: 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  position: relative;
+
+  list-style: none;
+}
+
+.icecream-item {
+  width: 293px;
+  position: relative;
+  margin-top: 38px;
 
   display: -webkit-box;
 
   display: -ms-flexbox;
 
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  text-align: center;
-  position: relative;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.icecream-item {
-  width: 267px;
-  position: relative;
-
-  margin-top: 38px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hit-item::before {
@@ -1140,6 +1151,8 @@ a {
 
   background-image: url("../img/svg/hit.svg");
   background-repeat: no-repeat;
+
+  left: 13px;
 }
 
 .hit-item:hover::before {
@@ -1153,23 +1166,26 @@ a {
 
   margin: 0;
   padding-top: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-  padding-left: 5px;
-  padding-right: 5px;
+.hit-item .icecream-list-title {
+  padding-top: 12px;
 }
 
 .price-big {
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
+  text-shadow: 1px 1px 3px rgba(49,50,53,0.5);
 
-  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
-  color: #ffffff;
+  color: #fff;
 
   position: absolute;
-  bottom: 65px;
+  bottom: 64px;
   margin: 0;
-  left: -2px;
+  left: 11px;
 }
 
 .inner-list .price-big {
@@ -1179,6 +1195,7 @@ a {
 
 .weight-small {
   font-size: 30px;
+
   position: relative;
   padding-left: 35px;
 }
@@ -1187,6 +1204,7 @@ a {
   position: absolute;
   content: "";
   background-image: url("../img/svg/ruble.svg");
+
   width: 31px;
   height: 36px;
   top: -6px;
@@ -1215,9 +1233,9 @@ a {
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
+  letter-spacing: 0.2px;
 
   margin: 0;
-  letter-spacing: 0.2px;
 }
 
 .advantages-list {
@@ -1269,11 +1287,12 @@ a {
   content:"";
   width: 49px;
   height: 49px;
+
   background-image: url("../img/svg/ice-cream.svg");
   background-repeat: no-repeat;
+
   top: -13px;
-  left: 0px;
-  background-repeat: no-repeat;
+  left: 0;
 }
 
 .advantage-farm {
@@ -1287,13 +1306,13 @@ a {
   content:"";
   width: 49px;
   height: 49px;
+
   background-image: url("../img/svg/cow.svg");
   background-repeat: no-repeat;
-  top: -13px;
-  left: 0px;
-  background-repeat: no-repeat;
-}
 
+  top: -13px;
+  left: 0;
+}
 
 .advantage-nature {
   -webkit-box-ordinal-group: 4;
@@ -1306,13 +1325,13 @@ a {
   content:"";
   width: 49px;
   height: 49px;
+
   background-image: url("../img/svg/eco.svg");
   background-repeat: no-repeat;
-  top: -13px;
-  left: 0px;
-  background-repeat: no-repeat;
-}
 
+  top: -13px;
+  left: 0;
+}
 
 .advantage-temperature {
   -webkit-box-ordinal-group: 5;
@@ -1325,13 +1344,13 @@ a {
   content:"";
   width: 49px;
   height: 49px;
+
   background-image: url(../img/svg/thermometer.svg);
   background-repeat: no-repeat;
-  top: -13px;
-  left: 0px;
-  background-repeat: no-repeat;
-}
 
+  top: -13px;
+  left: 0;
+}
 
 /* Статья */
 
@@ -1348,13 +1367,16 @@ a {
 
 .article-new {
   width: 540px;
+
   background-image: url("../img/strawberry_bg.jpg");
   background-color: #fcfcfc;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 15px;
+
   padding-top: 9px;
   padding-left: 20px;
+
+  border-radius: 15px;
 }
 
 .article-new h2 {
@@ -1384,20 +1406,22 @@ a {
 
 }
 
-
 /* Форма для подписки */
 
 .subscription {
   width: 560px;
+
   background: url("../img/svg/bg-post.svg");
+
   border-radius: 15px;
 }
 
 .subscription-wrapper {
   background-color: #f8f7f4;
-  margin: 5px;
+
   border-radius: 15px;
 
+  margin: 5px;
   padding-bottom: 10px;
 }
 
@@ -1447,12 +1471,15 @@ a {
 .subscription-form input:hover {
   border: 2px solid rgba(154, 154, 154, 0.52);
   outline: none;
+
   padding: 8px 12px;
 }
 
 .subscription-form input:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
+
   background-color: #ffffff;
+
   padding: 8px 12px;
 }
 
@@ -1482,27 +1509,33 @@ a {
 }
 
 .subscription-btn {
-  padding: 9px 19px;
-  color: #fefefe;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+
+  padding: 9px 19px;
+
+  color: #fefefe;
 }
 
 /* карта */
 
 .map {
-  margin-top: 41px;
   position: relative;
   width: 100%;
+
   height: 427px;
+  margin-top: 41px;
+
   background: url("../img/map.jpg") no-repeat center;
 }
 
 .interactive-map {
   width: 100%;
   height: 427px;
+
   z-index: 1;
+
   position: absolute;
 }
 
@@ -1513,21 +1546,22 @@ a {
 }
 
 .map-information-wrapper {
+  text-align: center;
+
   position: absolute;
   top: 61px;
   right: 0;
-  background-color: #ffffff;
-
   max-width: 302px;
 
   border-radius: 15px;
+  background-color: #ffffff;
 
-  text-align: center;
   z-index: 2;
 }
 
 .map-information {
   color: #323232;
+
   font-style: normal;
   font-size: 14px;
   font-weight: 400;
@@ -1548,6 +1582,7 @@ a {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+
   color: #323232;
 }
 
@@ -1588,8 +1623,7 @@ a {
 
 .feedback-form {
   width: 427px;
-  background-color: #f8f7f4;
-  position: fixed;
+
   top: 339px;
   left: 50%;
   margin-left: -239px;
@@ -1597,6 +1631,9 @@ a {
   padding-top: 13px;
   padding-left: 26px;
   padding-right: 26px;
+
+  position: fixed;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1606,6 +1643,8 @@ a {
           flex-direction: column;
 
   z-index: 3;
+
+  background-color: #f8f7f4;
 }
 
 .modal-show {
@@ -1621,12 +1660,14 @@ a {
   position: absolute;
   right: 8px;
   top: 8px;
+
   border: none;
   background-color: transparent;
 }
 
 .feedback-title {
   color: #323232;
+
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
@@ -1645,9 +1686,8 @@ a {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
+
   width: 266px;
-  border: 1px solid rgba(178, 178, 178, 0.52);
-  background-color: #ffffff;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 19px;
@@ -1655,6 +1695,10 @@ a {
   padding-right: 12px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  background-color: #ffffff;
+
   border-radius: 5px;
 }
 
@@ -1722,6 +1766,7 @@ a {
 .feedback-name input:hover,
 .feedback-email input:hover {
   border: 2px inset rgba(154, 154, 154, 0.52);
+
   outline: none;
   padding-top: 9px;
   padding-bottom: 9px;
@@ -1731,6 +1776,7 @@ a {
 
 .feedback-comment textarea:hover {
   border: 2px inset rgba(154, 154, 154, 0.52);
+
   outline: none;
   padding: 4px 11px;
 }
@@ -1738,12 +1784,14 @@ a {
 .feedback-name input:focus,
 .feedback-email input:focus {
   border: 2px inset rgba(46, 136, 228, 0.52);
+
   outline: none;
   padding: 9px 11px;
 }
 
 .feedback-comment textarea:focus {
   border: 2px inset rgba(46, 136, 228, 0.52);
+
   outline: none;
   padding: 4px 11px;
 }
@@ -1753,6 +1801,7 @@ a {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+
   margin-top: 15px;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -1773,18 +1822,21 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+
   padding-bottom: 22px;
 }
 
 .social-links {
   list-style: none;
+
   margin: 0;
   padding: 0;
+  margin-left: 2px;
+  margin-top: 28px;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 2px;
-  margin-top: 28px;
 }
 
 .main-footer .social-links {
@@ -1823,6 +1875,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+
   padding-top: 19px;
   padding-right: 3px;
 }
@@ -1834,6 +1887,7 @@ a {
 .important-links-left,
 .important-links-right {
   list-style: none;
+
   margin: 0;
   padding: 0;
 }
@@ -1858,7 +1912,6 @@ a {
   background-image: url("../img/svg/heart.svg");
 }
 
-
 .important-links-left {
   padding-right: 31px;
 }
@@ -1882,6 +1935,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+
   margin: 0;
   padding: 0;
 }
@@ -1916,6 +1970,7 @@ a {
 
 .inner-body {
   background-color: #849d8f;
+
   width: 1146px;
 }
 
@@ -1933,7 +1988,6 @@ a {
   width: 261px;
 }
 
-
 .on-page-link {
   padding: 6px 14px;
 
@@ -1948,6 +2002,7 @@ a {
   margin: 0;
   padding: 0;
   margin-top: -16px;
+  margin-left: 26px;
 
   display: -webkit-box;
 
@@ -1991,6 +2046,7 @@ a {
   line-height: 41px;
 
   margin: 0;
+  margin-left: 26px;
   padding-top: 2px;
 }
 
@@ -1998,6 +2054,15 @@ a {
 
 .filter {
   margin-top: 25px;
+  margin-bottom: 41px;
+}
+
+.catalog-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .filter-part {
@@ -2018,6 +2083,7 @@ a {
 
 .form-interactive {
   background-color: rgba(248, 247, 244, 0.2);
+
   border-radius: 50px;
 }
 
@@ -2069,7 +2135,6 @@ a {
   fill: #ffffff;
 }
 
-
 .form-sort {
   position: relative;
 
@@ -2117,41 +2182,28 @@ a {
           align-items: center;
 
   position: relative;
-
-  /* padding: 16px 21px; */
   padding: 8px 66px 8px 36px;
 }
 
 .scale {
-/* при абслют  */
-
-  /* width: 176px;
-  height: 4px;
-  background-color: rgba(248, 247, 244, 0.5);
-  margin-left: 2px; */
-
-
   width: 176px;
   height: 4px;
+
   background-color: rgba(248, 247, 244, 0.5);
+
   margin-left: -13px;
 }
 
 .bar {
-  /* width: 107px;
-  height: 4px;
-  background-color: #f8f7f4;
-
-  margin-left: 20px; */
-
   width: 105px;
   height: 4px;
+
   background-color: #f8f7f4;
+
   margin-left: 22px;
 }
 
 .range-toggle {
-  /* position: absolute; */
   width: 4px;
   height: 4px;
 
@@ -2174,25 +2226,24 @@ a {
 
 .min-price,
 .max-price {
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: transparent;
-  width: 26px;
-
   color: #ffffff;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
+
+  padding: 0;
+  margin: 0;
+  width: 26px;
+
+  border: none;
+  background: transparent;
 }
 
 .range-toggle-min {
-  /* left: 36px; */
   margin-left: -163px;
 }
 
 .range-toggle-max {
-  /* right: 66px; */
   margin-left: 78px;
 }
 
@@ -2217,22 +2268,22 @@ a {
 }
 
 .fatness-item label {
-  position: relative;
-  margin-left: 28px;
-  margin-right: 12px;
-
   color: #ffffff;
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
 
+  position: relative;
+  margin-left: 28px;
+  margin-right: 12px;
+
   right: 3px;
   bottom: 1px;
   padding-left: 9px;
+
   cursor: pointer;
 }
-
 
 .fatness-radio + label::before {
   content: "";
@@ -2266,9 +2317,16 @@ a {
 /* Наполнители */
 
 .fillers {
-  list-style: none;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+
+
   margin: 0;
   padding: 0;
+  padding: 9px 0 9px 12px;
 
   display: -webkit-box;
 
@@ -2282,13 +2340,7 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
-  color: #ffffff;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18px;
-
-  padding: 9px 0 9px 12px;
+  list-style: none;
 }
 
 .filler-item {
@@ -2301,7 +2353,6 @@ a {
   position: absolute;
   top: -3px;
   left: -1px;
-
   width: 26px;
   height: 23px;
 
@@ -2359,6 +2410,7 @@ a {
   background-color: #ededed;
 }
 
+/* Каталог мороженого */
 
 .catalog-list {
   list-style: none;
@@ -2366,6 +2418,22 @@ a {
 
 .inner-list {
   margin-top: 2px;
+}
+
+.inner-list .icecream-item {
+  margin-top: 0;
+}
+
+.inner-list .price-big {
+  left: 11px;
+  bottom: 101px;
+}
+
+.inner-list .icecream-list-title {
+  padding-top: 13px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 38px;
 }
 
 /* наведение на мороженое */
@@ -2380,7 +2448,7 @@ a {
   padding-bottom: 20px;
   position: absolute;
   top: -13px;
-  left: -13px;
+  left: 0;
   border-radius: 5px;
 
   display: none;
@@ -2424,10 +2492,6 @@ a {
   z-index: 30;
 }
 
-.hit-item .icecream-list-title {
-  padding-top: 6px;
-}
-
 .paginator {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2436,38 +2500,36 @@ a {
       -ms-flex-pack: end;
           justify-content: flex-end;
 
-  padding-top: 79px;
+  padding-top: 42px;
   padding-right: 5px;
   padding-bottom: 39px;
 }
 
 .paginator-list {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #323232;
+
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-right: 16px;
+  margin-right: 19px;
 
   display: -webkit-box;
 
   display: -ms-flexbox;
 
   display: flex;
-  width: 146px;
+  width: 147px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   position: relative;
-
-  color: #ffffff;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18px;
-  color: #323232;
 }
-
 
 .paginator-item {
   width: 26px;
@@ -2531,7 +2593,6 @@ a {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-
 
 .paginator-list::after {
   content: "";
