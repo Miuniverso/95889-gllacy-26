@@ -103,7 +103,7 @@ body {
 
   margin: 0 auto;
 
-   min-width: 1146px;
+   min-width: 1200px;
 }
 
 
@@ -186,7 +186,7 @@ a {
 }
 
 .logo-link {
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 }
 
 .navigation-links-left {
@@ -236,7 +236,7 @@ a {
           justify-content: space-between;
   width: 245px;
 
-  padding-top: 4px;
+  padding-top: 7px;
 }
 
 /* список навигационных кнопок справа в каталоге */
@@ -365,6 +365,10 @@ a {
   display: block;
 }
 
+.navigation-btn-search {
+  margin-top: -1px;
+}
+
 .btn-search {
   width: 33px;
   height: 33px;
@@ -420,9 +424,49 @@ a {
 }
 
 .search-form input {
-  width: 287px;
+  width: 310px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 700;
+}
+
+.search-form input:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+  outline: none;
+  padding: 11px 9px;
+}
+
+.search-form input:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  background-color: #ffffff;
+  padding: 11px 9px;
+}
+
+.search-form input::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.search-form input::-moz-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.search-form input:-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.search-form input::-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.search-form input::placeholder {
+  color: #999999;
+  font-weight: 400;
 }
 
 .btn-login,
@@ -445,8 +489,6 @@ a {
 
   position: relative;
   padding: 6px 17px 6px 15px;
-
-  /* padding: 9px 17px 9px 43px; */
 }
 
 .btn-search:hover,
@@ -476,8 +518,6 @@ a {
 
 .btn-login svg,
 .btn-basket svg {
-  /* position: absolute;
-  left: 15px; */
   padding-right: 7px;
 }
 
@@ -534,6 +574,44 @@ a {
   margin-top: 20px;
   padding-left: 15px;
   padding-right: 15px;
+  font-weight: 700;
+}
+
+.login-form input:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+  outline: none;
+  padding: 11px 9px;
+}
+
+.login-form input:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  background-color: #ffffff;
+  padding: 11px 9px;
+}
+
+.login-form input::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.login-form input::-moz-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.login-form input:-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.login-form input::-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.login-form input::placeholder {
+  color: #999999;
+  font-weight: 400;
 }
 
 .login-btn {
@@ -553,13 +631,6 @@ a {
 .login-help-links {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  /* display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; */
   margin-top: -41px;
   margin-right: 20px;
 }
@@ -568,7 +639,6 @@ a {
   color: #323232;
   font-size: 13px;
   font-weight: 400;
-  /* line-height: 24px; */
   padding-top: 3px;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -628,8 +698,6 @@ a {
 }
 
 .basket-list-table {
-  /* padding-top: 2px; */
-
   padding-top: 17px;
   border-collapse: collapse;
 }
@@ -646,18 +714,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  /* align-items: center; */
-
-  /* padding-top: 14px; */
-
-  /* new */
   padding-bottom: 15px;
   padding-right: 31px;
 }
 
 .table-close-btn-sting {
-  /* padding-top: 9px; */
-
   padding-top: 8px;
 }
 
@@ -669,9 +730,6 @@ a {
 }
 
 .icecream-mini-string {
-  /* padding-top: 2px; */
-  /* padding-left: 3px; */
-
   padding-left: 4px;
 }
 
@@ -782,6 +840,10 @@ a {
   position: absolute;
   right: 0;
   top: 69px;
+}
+
+.contact-information a {
+  color: inherit;
 }
 
 .work-time {
@@ -947,6 +1009,7 @@ a {
 
 .btn-buy {
   display: inline-block;
+  vertical-align: top;
 
   font-size: 32px;
   font-weight: 700;
@@ -1315,6 +1378,8 @@ a {
 
   width: 300px;
   display: inline-block;
+  vertical-align: top;
+
   padding-top: 4px;
 
 }
@@ -1363,7 +1428,7 @@ a {
 
 .subscription-form input {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
 
   width: 379px;
@@ -1379,39 +1444,41 @@ a {
   margin-right: 9px;
 }
 
-.subscription-form input:focus,
-.subscription-form input:focus {
+.subscription-form input:hover {
   border: 2px solid rgba(154, 154, 154, 0.52);
   outline: none;
-  padding-left: 13px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px 12px;
 }
 
-.subscription-form input:active {
+.subscription-form input:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
   background-color: #ffffff;
-  font-weight: 700;
+  padding: 8px 12px;
 }
 
 .subscription-form input::-webkit-input-placeholder {
   color: #999999;
+  font-weight: 400;
 }
 
 .subscription-form input::-moz-placeholder {
   color: #999999;
+  font-weight: 400;
 }
 
 .subscription-form input:-ms-input-placeholder {
   color: #999999;
+  font-weight: 400;
 }
 
 .subscription-form input::-ms-input-placeholder {
   color: #999999;
+  font-weight: 400;
 }
 
 .subscription-form input::placeholder {
   color: #999999;
+  font-weight: 400;
 }
 
 .subscription-btn {
@@ -1425,7 +1492,7 @@ a {
 /* карта */
 
 .map {
-  margin-top: 38px;
+  margin-top: 41px;
   position: relative;
   width: 100%;
   height: 427px;
@@ -1468,7 +1535,7 @@ a {
 
   padding-right: 10px;
   padding-left: 26px;
-  padding-top: 31px;
+  padding-top: 29px;
 
   text-align: left;
 }
@@ -1506,6 +1573,7 @@ a {
 
 .information-btn {
   display: inline-block;
+  vertical-align: top;
 
   color: #fefefe;
   font-size: 18px;
@@ -1572,10 +1640,10 @@ a {
 
 .feedback-name input,
 .feedback-email input {
-  color: #999999;
+  color: #323232;
   font-family: inherit;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
   width: 266px;
   border: 1px solid rgba(178, 178, 178, 0.52);
@@ -1591,10 +1659,10 @@ a {
 }
 
 .feedback-comment textarea {
-  color: #999999;
+  color: #323232;
   font-family: inherit;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
 
   width: 100%;
@@ -1616,11 +1684,44 @@ a {
   resize: none;
 }
 
+.feedback-name input::-webkit-input-placeholder,
+.feedback-email input::-webkit-input-placeholder,
+.feedback-comment textarea::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.feedback-name input::-moz-placeholder,
+.feedback-email input::-moz-placeholder,
+.feedback-comment textarea::-moz-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.feedback-name input:-ms-input-placeholder,
+.feedback-email input:-ms-input-placeholder,
+.feedback-comment textarea:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.feedback-name input::-ms-input-placeholder,
+.feedback-email input::-ms-input-placeholder,
+.feedback-comment textarea::-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.feedback-name input::placeholder,
+.feedback-email input::placeholder,
+.feedback-comment textarea::placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
 .feedback-name input:hover,
-.feedback-email input:hover,
-.feedback-name input:focus,
-.feedback-email input:focus {
-  border: 2px solid rgba(154, 154, 154, 0.52);
+.feedback-email input:hover {
+  border: 2px inset rgba(154, 154, 154, 0.52);
   outline: none;
   padding-top: 9px;
   padding-bottom: 9px;
@@ -1628,12 +1729,24 @@ a {
   padding-right: 11px;
 }
 
-.feedback-name input:active,
-.feedback-email input:active {
-  border: 2px solid rgba(46, 136, 228, 0.52);
+.feedback-comment textarea:hover {
+  border: 2px inset rgba(154, 154, 154, 0.52);
   outline: none;
+  padding: 4px 11px;
 }
 
+.feedback-name input:focus,
+.feedback-email input:focus {
+  border: 2px inset rgba(46, 136, 228, 0.52);
+  outline: none;
+  padding: 9px 11px;
+}
+
+.feedback-comment textarea:focus {
+  border: 2px inset rgba(46, 136, 228, 0.52);
+  outline: none;
+  padding: 4px 11px;
+}
 
 .feedback-btn {
   color: #fefefe;
@@ -1675,7 +1788,7 @@ a {
 }
 
 .main-footer .social-links {
-  margin-top: 31px;
+  margin-top: 39px;
 }
 
 .social-link-item {
@@ -1715,7 +1828,7 @@ a {
 }
 
 .main-footer .important-links {
-  padding-top: 24px;
+  padding-top: 31px;
 }
 
 .important-links-left,
@@ -1774,7 +1887,7 @@ a {
 }
 
 .main-footer .copiright {
-  margin-top: 3px;
+  margin-top: 8px;
 }
 
 .htmlacademy-logo {
@@ -2348,7 +2461,7 @@ a {
   position: relative;
 
   color: #ffffff;
-  font-family: Roboto;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
