@@ -1166,10 +1166,6 @@ a {
 
   margin: 0;
   width: 263px;
-
-  /* padding-top: 8px;
-  padding-left: 15px;
-  padding-right: 15px; */
 }
 
 .hit-item .icecream-list-title {
@@ -2433,10 +2429,8 @@ a {
 
 .inner-list .icecream-list-title {
   width: 263px;
-  
+
   padding-top: 13px;
-  /* padding-left: 18px;
-  padding-right: 18px; */
   padding-bottom: 38px;
 }
 
