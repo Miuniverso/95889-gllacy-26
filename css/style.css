@@ -512,7 +512,7 @@ a {
   background-color: rgba(255,255,255, 0.2);
 }
 
-.btn-login svg path {
+.btn-login g {
   fill: #ffffff;
 }
 
